@@ -106,7 +106,8 @@ button a {
 
 }
 
-li:hover, button:hover {
+li:hover,
+button:hover {
   transform: scale(1.03);
 }
 
@@ -115,12 +116,12 @@ li:hover, button:hover {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(136);
+    transform: translateY(95px);
   }
 }
 
@@ -186,22 +187,26 @@ li:hover, button:hover {
   h3,
   h4,
   h5 {
-    font-size: var(--N-font-size-m)!important;
+    font-size: var(--N-font-size-m) !important;
   }
 
   p,
   li,
   a {
-    font-size: var(--N-font-size-s)!important;
+    font-size: var(--N-font-size-s) !important;
   }
 
   .main_style {
-    margin-top: var(--N-spacing-xxl)!important;
+    margin-top: var(--N-spacing-xxl) !important;
   }
 
 
-  .main_style, nav {
-    padding: var(--N-spacing-s)!important;
+  .main_style,
+  nav {
+    padding: var(--N-spacing-s) !important;
   }
-  .section_style {padding: var(--N-spacing-l) var(--N-spacing-s) !important;}
+
+  .section_style {
+    padding: var(--N-spacing-l) var(--N-spacing-s) !important;
+  }
 }

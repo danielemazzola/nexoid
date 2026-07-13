@@ -65,8 +65,8 @@ nav>div {
     .links.show_menu_toogle {
         display: flex;
         position: fixed;
-        transform: translateY(136px);
+        transform: translateY(95px);
         left: 0;
-        padding: var(--N-spacing-xl)
+        padding: var(--N-spacing-s)
     }
 }

@@ -10,17 +10,13 @@ function Navbar() {
     setToogleMenu((prev) => !prev);
   };
 
-  useEffect(() => {
-    console.log(toogleMenu);
-  }, [toogleMenu]);
-
   return (
     <nav className="filter">
       <div>
         <div className="logo link_color">
           <Link to={navbar[0].path}>{navbar[0].title}</Link>
           <div className="btn_toogle_menu" onClick={handleToogleMenu}>
-            <p>MENU</p>
+            <p>Menú</p>
           </div>
         </div>
 
