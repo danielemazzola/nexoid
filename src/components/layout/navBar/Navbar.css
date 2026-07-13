@@ -10,21 +10,59 @@ nav {
     align-items: normal;
 }
 
-nav div {
+nav > div {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: left;
-    justify-content: start;
-    gap: 1rem;
+    align-items: center;
 }
 
 .link_color a {
     color: var(--N-text-secondary);
+    text-decoration: none;
+}
 
+.links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn_toogle_menu {
+    display: none;
+    cursor: pointer;
+}
+
+.show_menu {
+    color: var(--N-text-secondary);
+}
+
+@media (max-width: 520px) {
+
+    nav > div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .link_color {
+        width: 100%;
+    }
+
+    .btn_toogle_menu {
+        display: flex;
+        justify-content: flex-end;
+        padding: .5rem 0;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+        margin-top: .5rem;
+    }
+
+    .links.show_menu_toogle {
+        display: flex;
+    }
 }
