@@ -2,18 +2,37 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: var(--N-spacing-xl);
+    padding: var(--N-spacing-s) var(--N-spacing-xl);
 }
 
-nav>div {
+nav div {
     display: flex;
     justify-content: space-between;
+    align-content: center;
+}
+
+nav div div {
+    gap: 1rem;
     align-items: center;
 }
+
 
 .link_color a {
     color: var(--N-text-secondary);
     text-decoration: none;
+}
+
+.img_logo {
+    width: 130px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.img_logo:hover {
+    transform: scale(0.99);
+    transition: .2s;
 }
 
 .links {
@@ -29,7 +48,20 @@ nav>div {
 
 .show_menu {
     color: var(--N-text-secondary);
+    padding: 2px;
 }
+
+.show_menu:hover {
+    transform: scale(0.95);
+    background-color: var(--N-bg-tertiary);
+    color: var(--N-text-tertiary);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: .2s;
+
+}
+
+
 
 @media (max-width: 520px) {
 

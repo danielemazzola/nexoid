@@ -15,7 +15,7 @@ const company = {
       text: "Conoce nuestros servicios",
       href: "/servicios",
     },
-    img: "https://dirteam.com/sander/wp-content/uploads/sites/2/2023/11/Microsoft-Entra-ID.png",
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1783981114/NexoID/qa3p2doxrqvmbsn345ys.jpg",
   },
 
   target: {
@@ -62,7 +62,7 @@ const company = {
       text: "Ver todos los servicios",
       href: "/servicios",
     },
-    img: 'https://res.cloudinary.com/dikdpoylq/image/upload/v1783927013/NexoID/j3zstiszthb01ciqwdwx.png'
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1783927013/NexoID/j3zstiszthb01ciqwdwx.png",
   },
 
   why: {
@@ -126,7 +126,7 @@ const company = {
           "Aplicamos las mejoras necesarias y automatizamos tareas repetitivas.",
       },
     ],
-    img: 'https://res.cloudinary.com/dikdpoylq/image/upload/v1783893029/NexoID/lpkccsfyltzeaaxmfviv.png'
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1783893029/NexoID/lpkccsfyltzeaaxmfviv.png",
   },
 
   cta: {

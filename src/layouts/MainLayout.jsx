@@ -8,9 +8,9 @@ import "./mainLayout.css";
 const MainLayout = () => {
   return (
     <>
-      <div style={{ position: "fixed", width: "100%", zIndex: "5" }}>
+      <header style={{ position: "fixed", width: "100%", zIndex: "5" }}>
         <Navbar />
-      </div>
+      </header>
 
       <main className="main_style">
         <Outlet />

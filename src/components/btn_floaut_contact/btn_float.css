@@ -1,0 +1,16 @@
+.btn_float {
+    padding: 0px 8px;
+    background-color: var(--N-bg-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn_float:hover {
+    transform: scale(0.97);
+    transition: 0.2s;
+    background-color: var(--N-bg-tertiary);
+}
+
+.btn_float a {
+    color: var(--N-text-tertiary)
+}
