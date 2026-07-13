@@ -1,0 +1,17 @@
+.section_style {
+    position: relative;
+    margin-bottom: var(--N-spacing-xl);
+    padding: var(--N-spacing-xxl);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: var(--N-spacing-m);
+}
+
+.super_bg {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.68);
+    z-index: 1;
+    border-radius: var(--N-spacing-m);
+}
