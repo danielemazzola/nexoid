@@ -67,6 +67,8 @@ nav>div {
         position: fixed;
         transform: translateY(95px);
         left: 0;
-        padding: var(--N-spacing-s)
+        padding: var(--N-spacing-s);
+        height: 100svh;
+        bottom: -84svh;
     }
 }

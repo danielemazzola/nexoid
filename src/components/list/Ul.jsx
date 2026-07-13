@@ -26,11 +26,11 @@ const Ul = ({ array }, style) => {
             padding: "var(--N-spacing-s)",
             borderRadius: "3px",
             cursor: "pointer",
-            
+
             ...(item.step && {
               width: "100%",
-              justifyContent: "space-between",
-              
+              flexWrap: "wrap",
+              gap:'5px'
             }),
           }}
         >
