@@ -1,6 +1,8 @@
+import "./ul.css";
 const Ul = ({ array }, style) => {
   return (
     <ul
+      className=""
       style={{
         display: "flex",
         gap: "1rem",
@@ -16,24 +18,7 @@ const Ul = ({ array }, style) => {
       }}
     >
       {array.map((item, index) => (
-        <li
-          key={item.id}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            backgroundColor: "var(--N-bg-primary)",
-            color: "var(--N-text-secondary)",
-            padding: "var(--N-spacing-s)",
-            borderRadius: "3px",
-            cursor: "pointer",
-
-            ...(item.step && {
-              width: "100%",
-              flexWrap: "wrap",
-              gap:'5px'
-            }),
-          }}
-        >
+        <li key={item.id} className="ul_badge">
           {item.text && item.text}
           {item.step && (
             <p

@@ -51,6 +51,12 @@ body {
   min-height: 100vh;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
 #root {
   width: 100%;
   display: flex;
@@ -96,9 +102,9 @@ button {
   border: none;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  padding: var(--N-spacing-xs);
-  border-radius: 5px;
-  background-color: var(--N-bg-tertiary);
+  padding: var(--N-spacing-xs) var(--N-spacing-s);
+  border-radius: 999px;
+  background-color: var(--N-bg-secondary);
 }
 
 button a {

@@ -1,16 +1,27 @@
 .btn_float {
-    padding: 0px 8px;
-    background-color: var(--N-bg-secondary);
-    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.btn_float:hover {
-    transform: scale(0.97);
-    transition: 0.2s;
-    background-color: var(--N-bg-tertiary);
+.btn_float a {
+    display: block;
+     width: 60px;
+    height: 60px;
 }
 
-.btn_float a {
-    color: var(--N-text-tertiary)
+.contact_me {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    transition: transform .2s ease;
+}
+
+.btn_float:hover .contact_me {
+    transform: scale(1.2);
 }

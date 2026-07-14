@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
-import contact from "../../assets/img/contact-us.png";
-
+import Dani from "../../assets/img/dani.png";
 import "./btn_float.css";
 
 const BtnFloat = ({ props }) => {
   return (
     <div className="btn_float">
-      <Link key={props.id} to={props.path}>
-        {props.title}
+      <Link to={props.path}>
+        <img
+          className="contact_me"
+          src={Dani}
+          alt="Contacto"
+        />
       </Link>
     </div>
   );
 };
-
 
 export default BtnFloat;

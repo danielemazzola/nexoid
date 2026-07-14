@@ -59,18 +59,10 @@ const Home = () => {
       </Section>
 
       <Section as="h2" img={process.img} title={process.title}>
-        {/* {process.items.map((item) => (
-          <div key={item.id}>
-            <div>{item.step}</div>
-            <div>{item.title}</div>
-            <div>{item.description}</div>
-          </div> 
-        ))}
-        */}
         <Ul array={process.items} />
       </Section>
 
-      <Section as="h2" title={cta.title} description={cta.description}>
+      <Section as="h2" img={cta.img} title={cta.title} description={cta.description}>
         <Button value={cta.button.text} href={cta.button.href} />
       </Section>
     </>

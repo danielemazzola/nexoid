@@ -15,7 +15,7 @@ const company = {
       text: "Conoce nuestros servicios",
       href: "/servicios",
     },
-    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1783981114/NexoID/qa3p2doxrqvmbsn345ys.jpg",
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1784067814/NexoID/j4jwquucdrzabu6tbtvq.jpg",
   },
 
   target: {
@@ -30,7 +30,7 @@ const company = {
       { id: "target-5", text: "Empresas de servicios" },
       { id: "target-6", text: "Cualquier PYME con Microsoft 365" },
     ],
-    img: "https://res-console.cloudinary.com/dikdpoylq/thumbnails/v1/image/upload/v1783892411/TmV4b0lEL25leG9pZF9weW1lcw==/drilldown",
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1784070245/NexoID/aybqyvvsqfji5omnp2kw.jpg",
   },
 
   problems: {
@@ -40,18 +40,19 @@ const company = {
     items: [
       { id: "problem-1", text: "Usuarios bloqueados" },
       { id: "problem-2", text: "Problemas con MFA" },
-      { id: "problem-3", text: "Conditional Access" },
+      { id: "problem-3", text: "Acceso condicional" },
       { id: "problem-4", text: "Administradores con privilegios excesivos" },
       { id: "problem-5", text: "Errores de sincronización" },
       { id: "problem-6", text: "Usuarios duplicados" },
-      { id: "problem-7", text: "Optimización de licencias" },
+      { id: "problem-7", text: "Recuperación de Dominios" },
       { id: "problem-8", text: "Configuración de PIM" },
       { id: "problem-9", text: "Security Defaults" },
-      { id: "problem-10", text: "Tenant Takeover" },
+      { id: "problem-10", text: "Creación de usuarios" },
       { id: "problem-11", text: "Break Glass" },
       { id: "problem-12", text: "Guest Users" },
+      { id: "problem-13", text: "Best practices" },
     ],
-    img: "https://supertokens.com/covers/benefits-of-multi-factor-authentication.png",
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1784069903/NexoID/hr7hnsut34lbdrute8sn.jpg",
   },
 
   services: {
@@ -62,7 +63,7 @@ const company = {
       text: "Ver todos los servicios",
       href: "/servicios",
     },
-    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1783927013/NexoID/j3zstiszthb01ciqwdwx.png",
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1784069903/NexoID/hr7hnsut34lbdrute8sn.jpg",
   },
 
   why: {
@@ -91,7 +92,7 @@ const company = {
         text: "Experiencia con entornos Cloud e Híbridos",
       },
     ],
-    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1783893029/NexoID/lpkccsfyltzeaaxmfviv.png",
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1784069903/NexoID/hr7hnsut34lbdrute8sn.jpg",
   },
 
   process: {
@@ -126,7 +127,7 @@ const company = {
           "Aplicamos las mejoras necesarias y automatizamos tareas repetitivas.",
       },
     ],
-    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1783893029/NexoID/lpkccsfyltzeaaxmfviv.png",
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1784069903/NexoID/hr7hnsut34lbdrute8sn.jpg",
   },
 
   cta: {
@@ -137,6 +138,7 @@ const company = {
       text: "Solicitar auditoría",
       href: "/contacto",
     },
+    img: "https://res.cloudinary.com/dikdpoylq/image/upload/v1784069903/NexoID/hr7hnsut34lbdrute8sn.jpg",
   },
 };
 

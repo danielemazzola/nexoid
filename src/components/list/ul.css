@@ -1,0 +1,17 @@
+.ul_badge li {
+    max-width: 650px;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.ul_badge {
+    display: inline-block;
+    width: fit-content;
+    padding: .4rem .8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .18);
+    backdrop-filter: blur(8px);
+    font-size: .9rem;
+    font-weight: 600;
+}

@@ -9,38 +9,21 @@ const Section = ({
   children,
 }) => {
   return (
-    <section
-      className="section_style"
-      style={{
-        ...(img && {
-          backgroundImage: `url(${img})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }),
-      }}
-    >
-      <div
-        className="super_bg"
-      />
-      <div
-        style={{
-          position: "relative",
-          zIndex: 2,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "start",
-          gap: "var(--N-spacing-l)",
-          color: "#fff",
-        }}
-      >
-        <Target>{title}</Target>
+    <section className="section_style">
+      <div className="content_banner">
+        {img && <img className="banner" src={img} alt={title} />}
 
-        {badge && <p>{badge}</p>}
+        <div className="overlay" />
 
-        {description && <p>{description}</p>}
+        <div className="banner_content">
+          <Target>{title}</Target>
 
-        {children}
+          {badge && <p className="badge">{badge}</p>}
+
+          {description && <p>{description}</p>}
+
+          {children}
+        </div>
       </div>
     </section>
   );

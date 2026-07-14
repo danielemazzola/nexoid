@@ -8,7 +8,7 @@ import "./mainLayout.css";
 const MainLayout = () => {
   return (
     <>
-      <header style={{ position: "fixed", width: "100%", zIndex: "5" }}>
+      <header>
         <Navbar />
       </header>
 
