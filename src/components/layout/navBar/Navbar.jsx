@@ -15,36 +15,36 @@ function Navbar() {
 
   return (
     <nav className="filter">
-      <div>
-        <div>
-          <div className="logo link_color">
-            <Link to={navbar[0].path}>
-              <img src={logo} alt={navbar[0].title} className="img_logo" />
-            </Link>
-            <div className="btn_toogle_menu" onClick={handleToogleMenu}>
-              <p>Menú</p>
-            </div>
+      <div className="container_navbar">
+        <div className="container_nav">
+          <div className={`btn_toogle_menu ${toogleMenu ? "animation_menu_open" : "animation_menu_close"} `} onClick={handleToogleMenu}>
+            <span className="line_menu"></span>
+            <span className="line_menu"></span>
+            <span className="line_menu"></span>
           </div>
-
-          <div className="link_color">
-            <div
-              className={`links ${toogleMenu ? "show_menu_toogle filter fadeIn" : ""}`}
-            >
-              {navbar
-                .filter(
-                  (item) => item.id !== 1 && item.id !== 2 && item.id !== 6,
-                )
-                .map((item) => (
-                  <Link className="show_menu" key={item.id} to={item.path}>
-                    {item.title}
-                  </Link>
-                ))}
-            </div>
-          </div>
-        </div>
-        <div>
+          <Link to={navbar[0].path}>
+            <img src={logo} alt={navbar[0].title} className="img_logo" />
+          </Link>
           <BtnFloat props={navbar[5]} />
         </div>
+        {/**MENU */}
+      </div>
+
+      <div
+        className={`container_nav_options ${toogleMenu ? "show_menu" : "toogle_false"}`}
+      >
+        {navbar
+          .filter((item) => item.id !== 1 && item.id !== 6)
+          .map((item) => (
+            <Link
+              className="show_menu"
+              key={item.id}
+              to={item.path}
+              onClick={handleToogleMenu}
+            >
+              {item.title}
+            </Link>
+          ))}
       </div>
     </nav>
   );
