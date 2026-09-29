@@ -1,0 +1,21 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo_mark {
+  filter: drop-shadow(0 0 10px rgba(58, 214, 255, 0.35));
+}
+
+.logo_text {
+  font-family: var(--N-font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  color: var(--N-text);
+}
+
+.logo_text span {
+  color: var(--N-blue-2);
+}

@@ -1,0 +1,195 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+}
+
+/*
+ * El fondo desenfocado va en una capa aparte (::before) y NO en .header:
+ * un backdrop-filter en el padre convierte a .header_mobile (position: fixed)
+ * en relativo a la cabecera y el menú móvil se quedaba sin ocupar la pantalla.
+ */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-bottom: 1px solid transparent;
+  transition: background 0.35s var(--N-ease), border-color 0.35s var(--N-ease);
+}
+
+.header_scrolled::before,
+.header_open::before {
+  background: rgba(5, 7, 13, 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom-color: var(--N-border);
+}
+
+.header_open::before {
+  background: rgba(5, 7, 13, 0.96);
+}
+
+.header_inner {
+  height: var(--N-nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header_logo {
+  flex-shrink: 0;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  border: 1px solid var(--N-border);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.header_link {
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--N-text-muted);
+  transition: color 0.2s, background 0.2s;
+}
+
+.header_link:hover {
+  color: var(--N-text);
+}
+
+.header_link_active {
+  color: var(--N-text);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.header_actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header_cta {
+  min-height: 40px;
+  padding: 0 18px;
+  font-size: 0.9rem;
+}
+
+.header_toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--N-border-strong);
+  position: relative;
+}
+
+.header_toggle span {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  height: 1.5px;
+  background: var(--N-text);
+  border-radius: 2px;
+  transition: transform 0.35s var(--N-ease), top 0.35s var(--N-ease);
+}
+
+.header_toggle span:nth-child(1) {
+  top: 16px;
+}
+
+.header_toggle span:nth-child(2) {
+  top: 24px;
+}
+
+.header_open .header_toggle span:nth-child(1) {
+  top: 20px;
+  transform: rotate(45deg);
+}
+
+.header_open .header_toggle span:nth-child(2) {
+  top: 20px;
+  transform: rotate(-45deg);
+}
+
+/* ---- Menú móvil ---- */
+
+.header_mobile {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .header_nav,
+  .header_cta {
+    display: none;
+  }
+
+  .header_toggle {
+    display: block;
+  }
+
+  .header_mobile {
+    display: block;
+    position: fixed;
+    inset: var(--N-nav-height) 0 0 0;
+    overflow-y: auto;
+    background: rgba(5, 7, 13, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s var(--N-ease), visibility 0.3s;
+  }
+
+  .header_open .header_mobile {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header_mobile_nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+  }
+
+  .header_mobile_link {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--N-border);
+    font-family: var(--N-font-display);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--N-text-muted);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s var(--N-ease), transform 0.4s var(--N-ease), color 0.2s;
+  }
+
+  .header_mobile_link span {
+    font-size: 0.8rem;
+    color: var(--N-cyan);
+  }
+
+  .header_mobile_link.header_link_active {
+    color: var(--N-text);
+    background: none;
+  }
+
+  .header_open .header_mobile_link {
+    opacity: 1;
+    transform: none;
+  }
+
+  .header_mobile_cta {
+    margin-top: 32px;
+    width: 100%;
+  }
+}

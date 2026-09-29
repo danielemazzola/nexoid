@@ -1,0 +1,68 @@
+/* Rejillas reutilizables para listas de tarjetas */
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid_tight {
+  gap: 12px;
+}
+
+.grid_3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid_4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid_note {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: var(--N-text-dim);
+}
+
+.check_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--N-border);
+}
+
+.check_list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--N-text);
+}
+
+.check_list svg {
+  flex-shrink: 0;
+  color: var(--N-ok);
+}
+
+@media (max-width: 1024px) {
+  .grid_4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid_3:not(.grid_tight) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .grid_tight {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid_4,
+  .grid_tight {
+    grid-template-columns: 1fr;
+  }
+}

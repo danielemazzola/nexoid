@@ -1,0 +1,136 @@
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact_form_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Honeypot fuera de pantalla (no display:none, algunos bots lo detectan) */
+.contact_hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact_check {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.check {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--N-text-muted);
+  cursor: pointer;
+}
+
+.check input {
+  position: absolute;
+  opacity: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.check_box {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 6px;
+  color: transparent;
+  border: 1px solid var(--N-border-strong);
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.check input:checked + .check_box {
+  color: #fff;
+  background: var(--N-blue);
+  border-color: var(--N-blue);
+}
+
+.check input:focus-visible + .check_box {
+  outline: 2px solid var(--N-cyan);
+  outline-offset: 2px;
+}
+
+.contact_check.field_error .check_box {
+  border-color: var(--N-risk);
+}
+
+.check a {
+  color: var(--N-cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact_legal {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--N-text-dim);
+}
+
+.contact_error {
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  color: #fecdd3;
+  background: rgba(251, 113, 133, 0.08);
+  border: 1px solid rgba(251, 113, 133, 0.3);
+}
+
+.contact_error a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.contact_submit {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+
+.contact_submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+.contact_success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.contact_success .icon_box {
+  color: var(--N-ok);
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+@media (max-width: 640px) {
+  .contact_form_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact_submit {
+    width: 100%;
+  }
+}

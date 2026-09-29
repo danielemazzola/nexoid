@@ -1,0 +1,29 @@
+.page_hero {
+  padding-top: calc(var(--N-nav-height) + clamp(3.5rem, 9vw, 7rem));
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.page_hero_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.page_hero h1 {
+  max-width: 900px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.page_hero p {
+  max-width: 640px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.page_hero_actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 6px;
+}

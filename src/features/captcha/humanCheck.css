@@ -1,0 +1,123 @@
+.human_check {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 14px 16px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--N-border-strong);
+  background: rgba(255, 255, 255, 0.025);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.human_check_verified {
+  border-color: rgba(52, 211, 153, 0.45);
+  background: rgba(52, 211, 153, 0.05);
+}
+
+.human_check_invalid {
+  border-color: var(--N-risk);
+}
+
+.human_check_box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  font-size: 0.92rem;
+  color: var(--N-text);
+}
+
+.human_check_box:disabled {
+  cursor: default;
+}
+
+.human_check_indicator {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 1.5px solid var(--N-border-strong);
+  background: rgba(255, 255, 255, 0.04);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.human_check_idle .human_check_box:hover .human_check_indicator,
+.human_check_error .human_check_box:hover .human_check_indicator {
+  border-color: var(--N-cyan);
+}
+
+.human_check_verified .human_check_indicator {
+  color: #04120c;
+  background: var(--N-ok);
+  border-color: var(--N-ok);
+  animation: human-pop 0.35s var(--N-ease);
+}
+
+.human_check_error .human_check_label {
+  color: var(--N-warn);
+}
+
+@keyframes human-pop {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.human_check_spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(58, 214, 255, 0.25);
+  border-top-color: var(--N-cyan);
+  animation: human-spin 0.7s linear infinite;
+}
+
+@keyframes human-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.human_check_brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--N-text-dim);
+}
+
+.human_check_brand svg {
+  color: var(--N-cyan);
+}
+
+.human_check_bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.human_check_bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--N-cyan), var(--N-blue));
+  transform-origin: left;
+  transition: transform 0.25s linear;
+}
+
+.human_check_verified .human_check_bar span {
+  background: var(--N-ok);
+}
+
+.human_check .field_message {
+  grid-column: 1 / -1;
+}

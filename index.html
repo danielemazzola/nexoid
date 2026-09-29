@@ -1,13 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nexoid</title>
+    <meta name="theme-color" content="#05070d" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!--
+      Metadatos por defecto (los leen los buscadores que no ejecutan JavaScript).
+      Cada página los sustituye con <Seo />; los marcados con data-default se eliminan al arrancar React.
+    -->
+    <title data-default>NexoID · Seguridad en Microsoft Entra ID para PYMEs</title>
+    <meta
+      data-default
+      name="description"
+      content="Auditorías, consultoría y automatización de Microsoft Entra ID y Microsoft 365 para PYMEs. MFA, acceso condicional y PIM. Solicita tu auditoría inicial."
+    />
+    <link data-default rel="canonical" href="https://nexoid.es" />
+    <meta data-default property="og:image" content="https://nexoid.es/og-image.png" />
+    <!-- Bing Webmaster Tools: pega aquí tu meta de verificación si no verificas por DNS -->
+    <!-- <meta name="msvalidate.01" content="TU_CODIGO_BING" /> -->
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://nexoid.es/#organization",
+      "name": "NexoID",
+      "url": "https://nexoid.es",
+      "logo": "https://nexoid.es/favicon.svg",
+      "image": "https://nexoid.es/og-image.png",
+      "description": "Especialistas en seguridad de identidad con Microsoft Entra ID: auditorías, consultoría y automatización para PYMEs.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "availableLanguage": "es",
+      "knowsAbout": [
+        "Microsoft Entra ID",
+        "Microsoft 365",
+        "Autenticación multifactor",
+        "Acceso condicional",
+        "Privileged Identity Management",
+        "PowerShell",
+        "Microsoft Graph"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nexoid.es/#website",
+      "url": "https://nexoid.es",
+      "name": "NexoID",
+      "inLanguage": "es-ES",
+      "publisher": {
+        "@id": "https://nexoid.es/#organization"
+      }
+    }
+  ]
+}
+    </script>
+
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <noscript>
+      <h1>NexoID · Especialistas en Microsoft Entra ID</h1>
+      <p>
+        Auditorías, consultoría especializada y automatización para mejorar la seguridad, gobernanza y administración
+        de Microsoft Entra ID y Microsoft 365 en PYMEs. Contacto: https://nexoid.es/contacto
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

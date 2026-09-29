@@ -1,16 +1,43 @@
-# React + Vite
+# NexoID · Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web corporativa de NexoID (especialistas en Microsoft Entra ID).
+Stack: **React 19 · TypeScript · Vite · React Router**. Desplegada en Vercel.
 
-Currently, two official plugins are available:
+## Puesta en marcha
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+cp .env.example .env        # en Windows: copy .env.example .env
+npm run dev                 # http://localhost:3000
+```
 
-## React Compiler
+Necesita el backend (`BACKEND/`) en marcha en `VITE_API_URL` para el formulario de contacto, la analítica y el registro de consentimientos.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
 
-## Expanding the ESLint configuration
+| Script              | Descripción                          |
+| ------------------- | ------------------------------------ |
+| `npm run dev`       | Servidor de desarrollo               |
+| `npm run build`     | Comprobación de tipos + build        |
+| `npm run lint`      | ESLint (TypeScript + React Hooks)    |
+| `npm run typecheck` | Solo comprobación de tipos           |
+| `npm run preview`   | Sirve el build localmente            |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura
+
+```
+src/
+  data/          Todo el contenido editable (textos, SEO, cookies, temas de contacto)
+  pages/         Páginas (una por ruta) y páginas legales
+  components/    Layout (header, footer…), secciones y UI reutilizable
+  features/      Lógica por dominio: contacto, captcha, consentimiento, analítica, SEO
+  services/      Cliente HTTP y envío de eventos (beacon)
+```
+
+- Temas del formulario: `src/data/contact.ts` debe coincidir con `BACKEND/src/shared/topics.ts`.
+- Si cambias rutas, actualiza `public/sitemap.xml`.
+- Si añades una cookie, regístrala en `src/data/cookies.ts` (y sube `CONSENT_VERSION` si cambian las finalidades).
+
+## Despliegue (Vercel)
+
+Variable de entorno: `VITE_API_URL` = URL pública del backend (sin barra final).

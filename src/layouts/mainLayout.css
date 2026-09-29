@@ -1,4 +1,56 @@
-.main_style {
-    padding: var(--N-spacing-xl);
-    margin-top: var(--N-spacing-xxxl);
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+/* ---- Fondo tecnológico fijo ---- */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.backdrop_grid {
+  position: absolute;
+  inset: -1px;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+.backdrop_glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+}
+
+.backdrop_glow_1 {
+  width: 720px;
+  height: 520px;
+  top: -260px;
+  left: 50%;
+  transform: translateX(-60%);
+  background: radial-gradient(circle, rgba(47, 107, 255, 0.35), transparent 70%);
+}
+
+.backdrop_glow_2 {
+  width: 520px;
+  height: 420px;
+  top: 12%;
+  right: -180px;
+  background: radial-gradient(circle, rgba(58, 214, 255, 0.14), transparent 70%);
+}
+
+.backdrop_noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

@@ -1,0 +1,33 @@
+import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "../layouts/MainLayout";
+
+import Home from "../pages/Home";
+import Services from "../pages/Services";
+import About from "../pages/About";
+import Blog from "../pages/Blog";
+import Contact from "../pages/Contact";
+import LegalNotice from "../pages/legal/LegalNotice";
+import PrivacyPolicy from "../pages/legal/PrivacyPolicy";
+import CookiesPolicy from "../pages/legal/CookiesPolicy";
+import NotFound from "../pages/NotFound";
+
+const AppRouter = () => {
+  return (
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/servicios" element={<Services />} />
+        <Route path="/quienes-somos" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contacto" element={<Contact />} />
+        <Route path="/legal" element={<LegalNotice />} />
+        <Route path="/privacidad" element={<PrivacyPolicy />} />
+        <Route path="/cookies" element={<CookiesPolicy />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
+};
+
+export default AppRouter;

@@ -1,0 +1,77 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field_label {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--N-text);
+}
+
+.field_optional {
+  margin-left: 6px;
+  font-weight: 400;
+  color: var(--N-text-dim);
+}
+
+.field_control {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--N-text);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--N-border-strong);
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.field_control::placeholder {
+  color: var(--N-text-dim);
+}
+
+.field_control:hover {
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+.field_control:focus {
+  outline: none;
+  border-color: var(--N-cyan);
+  background: rgba(58, 214, 255, 0.04);
+  box-shadow: 0 0 0 3px rgba(58, 214, 255, 0.15);
+}
+
+textarea.field_control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+select.field_control {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%238a94aa' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+select.field_control option {
+  background: var(--N-surface-solid);
+  color: var(--N-text);
+}
+
+.field_error .field_control {
+  border-color: var(--N-risk);
+}
+
+.field_message {
+  font-size: 0.8rem;
+  color: var(--N-risk);
+}
+
+.field_hint {
+  font-size: 0.8rem;
+  color: var(--N-text-dim);
+}

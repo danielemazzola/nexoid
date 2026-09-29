@@ -1,0 +1,5 @@
+# NexoID · robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://nexoid.es/sitemap.xml

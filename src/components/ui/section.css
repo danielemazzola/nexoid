@@ -1,0 +1,23 @@
+.section {
+  position: relative;
+  padding-block: clamp(4.5rem, 9vw, 7.5rem);
+}
+
+.section_head {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 720px;
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.section_head p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.section_head_center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}

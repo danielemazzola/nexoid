@@ -25,4 +25,3 @@ dist-ssr
 .history
 node_modules
 .env
-package-lock.json
