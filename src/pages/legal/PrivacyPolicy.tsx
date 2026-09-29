@@ -34,7 +34,8 @@ const PrivacyPolicy = () => (
     <h3>Consultas y solicitudes de auditoría</h3>
     <p>
       Si nos escribes, tratamos tu nombre, correo electrónico, teléfono, empresa y la información que nos facilites para
-      responderte y, en su caso, preparar una propuesta. <strong>Base jurídica:</strong> aplicación de medidas
+      responderte y, en su caso, preparar una propuesta. Al enviar el formulario te mandamos automáticamente un
+      email confirmando que hemos recibido tu consulta. <strong>Base jurídica:</strong> aplicación de medidas
       precontractuales a petición tuya (art. 6.1.b RGPD) y tu consentimiento al contactarnos (art. 6.1.a RGPD).
     </p>
     <h3>Medición de visitas</h3>
@@ -61,10 +62,24 @@ const PrivacyPolicy = () => (
     <h2>4. Destinatarios</h2>
     <p>
       No cedemos tus datos a terceros salvo obligación legal. Contamos con proveedores que actúan como encargados del
-      tratamiento, con contrato conforme al art. 28 RGPD, entre ellos el proveedor de alojamiento web (Vercel Inc.) y
-      el de base de datos. Si algún proveedor trata datos fuera del Espacio Económico Europeo, la transferencia se
-      ampara en las garantías del RGPD (decisión de adecuación, como el Marco de Privacidad de Datos UE-EE. UU., o
-      cláusulas contractuales tipo).
+      tratamiento, con contrato conforme al art. 28 RGPD:
+    </p>
+    <ul>
+      <li>
+        <strong>Vercel Inc.</strong> (EE. UU.): alojamiento de la web y de la API.
+      </li>
+      <li>
+        <strong>Neon</strong> (servidores en Frankfurt, UE): base de datos donde se guardan las consultas.
+      </li>
+      <li>
+        <strong>Resend</strong> (EE. UU., envío desde servidores en la UE): envío del email de confirmación de tu
+        consulta y del aviso interno con sus datos.
+      </li>
+    </ul>
+    <p>
+      Cuando un proveedor trata datos fuera del Espacio Económico Europeo, la transferencia se ampara en las garantías
+      del RGPD (decisión de adecuación, como el Marco de Privacidad de Datos UE-EE. UU., o cláusulas contractuales
+      tipo).
     </p>
 
     <h2>5. Tus derechos</h2>
