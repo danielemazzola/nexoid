@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import avatar from "../../../assets/img/dani-avatar.png";
+import avatar from "../../../assets/img/avatar-dani.svg";
 import { useConsent } from "../../../features/consent/ConsentContext";
 import "./floatingContact.css";
 

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Avatar ilustrado de Daniele Mazzola">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="80%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e6f4ff"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1bf98"/>
+      <stop offset="100%" stop-color="#dd9f78"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2d52"/>
+      <stop offset="100%" stop-color="#121c38"/>
+    </linearGradient>
+    <clipPath id="circle"><circle cx="100" cy="100" r="100"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#circle)">
+    <!-- Fondo blanco con cuadrícula de marca muy suave -->
+    <rect width="200" height="200" fill="url(#bg)"/>
+    <g stroke="#2f7bff" stroke-opacity="0.07" stroke-width="1">
+      <path d="M0 40H200M0 80H200M0 120H200M0 160H200M40 0V200M80 0V200M120 0V200M160 0V200"/>
+    </g>
+    <circle cx="100" cy="92" r="78" fill="none" stroke="#2f7bff" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="3 6"/>
+    <circle cx="166" cy="46" r="3.2" fill="#3ad6ff"/>
+    <circle cx="30" cy="70" r="2.6" fill="#2f7bff" fill-opacity="0.6"/>
+
+    <!-- Cuello -->
+    <path d="M84 132 L84 156 Q100 166 116 156 L116 132 Z" fill="#d0916b"/>
+
+    <!-- Hombros: americana azul marino -->
+    <path d="M22 200 Q26 162 62 152 L86 146 L100 176 L114 146 L138 152 Q174 162 178 200 Z" fill="url(#suit)"/>
+    <!-- Camisa blanca -->
+    <path d="M86 146 L100 176 L114 146 L110 142 L100 152 L90 142 Z" fill="#f8fafc"/>
+    <path d="M90 142 L100 152 L94 162 L84 148 Z" fill="#dbe3ee"/>
+    <path d="M110 142 L100 152 L106 162 L116 148 Z" fill="#dbe3ee"/>
+    <!-- Solapas -->
+    <path d="M86 146 L100 176 L90 186 L74 156 Z" fill="#2a3a64"/>
+    <path d="M114 146 L100 176 L110 186 L126 156 Z" fill="#2a3a64"/>
+    <!-- Pin de marca en la solapa -->
+    <circle cx="124" cy="166" r="3.2" fill="#3ad6ff"/>
+
+    <!-- Orejas -->
+    <ellipse cx="59" cy="92" rx="7" ry="11" fill="#e3a57e"/>
+    <ellipse cx="141" cy="92" rx="7" ry="11" fill="#e3a57e"/>
+    <path d="M58 87 Q55 92 58 98" stroke="#c98763" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M142 87 Q145 92 142 98" stroke="#c98763" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Cabeza rapada -->
+    <path d="M60 86 Q60 34 100 32 Q140 34 140 86 L140 104 Q140 130 100 138 Q60 130 60 104 Z" fill="url(#skin)"/>
+    <!-- Brillo de la cabeza -->
+    <ellipse cx="90" cy="44" rx="14" ry="6" fill="#fff" fill-opacity="0.5" transform="rotate(-14 90 44)"/>
+
+    <!-- Barba poblada y recortada -->
+    <path d="M62 98 Q62 120 72 133 Q84 149 100 149 Q116 149 128 133 Q138 120 138 98
+             Q134 107 128 110 Q122 102 112 104 Q100 100 88 104 Q78 102 72 110 Q66 107 62 98 Z" fill="#2b211c"/>
+    <!-- Bigote -->
+    <path d="M80 110 Q90 102 100 106 Q110 102 120 110 Q112 114 100 111 Q88 114 80 110 Z" fill="#231a16"/>
+    <!-- Boca sonriente -->
+    <path d="M86 117 Q100 130 114 117 Q100 121 86 117 Z" fill="#7a2e2a"/>
+    <path d="M88 117.5 Q100 124 112 117.5 Q100 120 88 117.5 Z" fill="#fff"/>
+
+    <!-- Nariz -->
+    <path d="M100 84 Q97 96 94 100 Q100 103 106 100" stroke="#c98763" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Cejas -->
+    <path d="M73 70 Q82 64 92 69" stroke="#2b211c" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M108 69 Q118 64 127 70" stroke="#2b211c" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- Ojos -->
+    <ellipse cx="83" cy="80" rx="7" ry="5.4" fill="#fff"/>
+    <ellipse cx="117" cy="80" rx="7" ry="5.4" fill="#fff"/>
+    <circle cx="83.5" cy="80.5" r="4" fill="#4a2c1a"/>
+    <circle cx="116.5" cy="80.5" r="4" fill="#4a2c1a"/>
+    <circle cx="83.5" cy="80.5" r="1.8" fill="#120a06"/>
+    <circle cx="116.5" cy="80.5" r="1.8" fill="#120a06"/>
+    <circle cx="85" cy="79" r="1.1" fill="#fff"/>
+    <circle cx="118" cy="79" r="1.1" fill="#fff"/>
+    <!-- Arrugas de sonrisa -->
+    <path d="M72 83 Q70 86 72 89" stroke="#c98763" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <path d="M128 83 Q130 86 128 89" stroke="#c98763" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <!-- Mejillas -->
+    <ellipse cx="74" cy="96" rx="6" ry="3.5" fill="#e88f7a" fill-opacity="0.35"/>
+    <ellipse cx="126" cy="96" rx="6" ry="3.5" fill="#e88f7a" fill-opacity="0.35"/>
+  </g>
+</svg>
