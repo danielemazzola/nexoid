@@ -1,6 +1,7 @@
 import { CONSENT_DAYS, CONSENT_VERSION, COOKIE_NAMES } from "../../data/cookies";
 import { deleteCookie, getCookie, randomId, setCookie } from "../../utils/cookies";
 import { sendBeacon } from "../../services/beacon";
+import { persistAttribution } from "../analytics/tracker";
 
 export interface ConsentChoices {
   analytics: boolean;
@@ -46,9 +47,13 @@ export const writeConsent = (choices: ConsentChoices, action: ConsentAction): Co
     deleteCookie(COOKIE_NAMES.visitor);
     try {
       sessionStorage.removeItem(COOKIE_NAMES.session);
+      sessionStorage.removeItem(COOKIE_NAMES.attribution);
     } catch {
       /* sessionStorage no disponible */
     }
+  } else {
+    // Acaba de aceptar: guardar ya el origen de esta visita (si recarga antes de navegar, no se pierde)
+    persistAttribution();
   }
 
   // Registro del consentimiento (art. 7.1 RGPD: el responsable debe poder demostrarlo)

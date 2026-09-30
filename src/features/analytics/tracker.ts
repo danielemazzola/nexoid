@@ -84,6 +84,28 @@ let attribution: Attribution | null = null;
 /** Primera página, procedencia y campaña de esta visita. Se adjunta al formulario de contacto. */
 export const getAttribution = (): Attribution | null => attribution;
 
+/**
+ * Con consentimiento analítico, el origen se guarda en sessionStorage para que sobreviva a recargas
+ * (se borra al cerrar la pestaña o al retirar el consentimiento). Sin consentimiento, solo vive en memoria.
+ */
+const restoreAttribution = (): Attribution | null => {
+  try {
+    const raw = sessionStorage.getItem(COOKIE_NAMES.attribution);
+    return raw ? (JSON.parse(raw) as Attribution) : null;
+  } catch {
+    return null;
+  }
+};
+
+export const persistAttribution = (): void => {
+  if (!attribution) return;
+  try {
+    sessionStorage.setItem(COOKIE_NAMES.attribution, JSON.stringify(attribution));
+  } catch {
+    /* sessionStorage no disponible */
+  }
+};
+
 // ---------- Visita en curso: tiempo activo, scroll y lectura por secciones ----------
 
 interface ActiveView {
@@ -209,6 +231,7 @@ export const trackPageView = (path: string, analyticsConsent: boolean): void => 
 
   const utm = readUtm();
   const referrer = referrerHost();
+  if (!attribution && analyticsConsent) attribution = restoreAttribution();
   attribution ??= {
     landingPath: path,
     referrer,
@@ -216,6 +239,7 @@ export const trackPageView = (path: string, analyticsConsent: boolean): void => 
     utmMedium: utm.utmMedium,
     utmCampaign: utm.utmCampaign,
   };
+  if (analyticsConsent) persistAttribution();
 
   const current: ActiveView = {
     id: randomId(),

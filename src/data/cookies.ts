@@ -32,6 +32,7 @@ export const COOKIE_NAMES = {
   consent: "nx_consent",
   visitor: "nx_vid",
   session: "nx_sid",
+  attribution: "nx_attr",
 } as const;
 
 export const categories: CategoryDefinition[] = [
@@ -73,6 +74,14 @@ export const cookies: CookieDefinition[] = [
     category: "analytics",
     provider: "NexoID (propia)",
     purpose: "Identificador aleatorio de la sesión de navegación actual.",
+    duration: "Hasta cerrar la pestaña",
+    type: "sessionStorage",
+  },
+  {
+    name: COOKIE_NAMES.attribution,
+    category: "analytics",
+    provider: "NexoID (propia)",
+    purpose: "Recuerda cómo llegaste a la web (primera página, web de procedencia y campaña) si recargas la página.",
     duration: "Hasta cerrar la pestaña",
     type: "sessionStorage",
   },
