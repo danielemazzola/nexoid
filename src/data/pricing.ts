@@ -55,6 +55,11 @@ const pricing = {
         "Algunas comprobaciones avanzadas (acceso condicional, PIM o la actividad de inicio de sesión) dependen de Microsoft Entra ID P1 o P2. Te decimos qué tienes, qué te falta y si compensa.",
     },
     {
+      question: "¿Y si tengo más de 500 usuarios o varios tenants?",
+      answer:
+        "Preparamos una propuesta a medida, también para proveedores de IT que gestionan varios clientes. Cuéntanos tu caso desde el formulario de contacto.",
+    },
+    {
       question: "¿Tocáis la configuración de mi tenant?",
       answer:
         "El análisis es de solo lectura. Cualquier cambio (MFA, acceso condicional, dominios…) se hace solo con tu aprobación explícita y queda registrado.",
