@@ -1,0 +1,30 @@
+# Avisa a Bing (y al resto de buscadores con IndexNow) tras cada despliegue de producción en Vercel.
+# Se ejecuta cuando Vercel marca el despliegue como correcto: las páginas ya están publicadas.
+name: IndexNow
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    env:
+      HOST: nexoid.es
+      # Clave pública: debe existir en public/<clave>.txt con el mismo contenido
+      KEY: cbf2a6f3c485028bdecffff982ee9480
+    steps:
+      - name: Enviar las URLs del sitemap a IndexNow
+        run: |
+          set -euo pipefail
+          urls=$(curl -fsS "https://$HOST/sitemap.xml" | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -R . | jq -sc .)
+          echo "URLs: $urls"
+          status=$(curl -sS -o /dev/null -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"$HOST\",\"key\":\"$KEY\",\"keyLocation\":\"https://$HOST/$KEY.txt\",\"urlList\":$urls}")
+          echo "IndexNow respondió HTTP $status"
+          # 200/202 = aceptado; 429 = demasiados envíos (no es un error del despliegue)
+          case "$status" in 200|202|429) ;; *) exit 1 ;; esac
