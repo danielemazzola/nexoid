@@ -4,7 +4,7 @@ import type { SiteData } from "../types/content";
 
 const site: SiteData = {
   name: "NexoID",
-  email: "info@nexoid.es",
+  email: "help@nexoid.es",
   website: "https://nexoid.es",
   tagline: "Especialistas en seguridad de identidad con Microsoft Entra ID.",
 
