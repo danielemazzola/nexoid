@@ -4,7 +4,7 @@ import "./stats.css";
 
 /** Banda de cifras clave. */
 const Stats = () => (
-  <section className="stats">
+  <section className="stats" data-section="Cifras">
     <div className="container">
       <div className="stats_grid">
         {company.stats.map((stat, index) => (

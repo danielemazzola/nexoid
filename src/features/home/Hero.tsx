@@ -9,7 +9,7 @@ const Hero = () => {
   const { hero } = company;
 
   return (
-    <section className="hero">
+    <section className="hero" data-section="Portada">
       <div className="container hero_grid">
         <div className="hero_copy">
           <span className="hero_badge reveal">

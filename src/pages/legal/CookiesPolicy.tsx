@@ -70,9 +70,12 @@ const CookiesPolicy = () => {
 
       <h2>Medición sin cookies</h2>
       <p>
-        Aunque rechaces las cookies analíticas, registramos cada página visitada de forma anónima y agregada (ruta,
-        dominio de procedencia, tipo de dispositivo e idioma) para conocer el número de visitas. Este registro no
-        utiliza cookies ni identificadores, no guarda tu dirección IP y no permite identificarte.
+        Aunque rechaces las cookies analíticas, registramos cada página visitada de forma anónima: ruta, dominio de
+        procedencia, campaña (parámetros <code>utm_*</code> del enlace), tipo de dispositivo, navegador y sistema
+        operativo (sin versión), idioma, ubicación aproximada (país, región y ciudad), tiempo en la página, hasta
+        dónde te desplazas y cuánto tiempo está visible cada sección. Nos sirve para saber qué contenidos resultan
+        útiles y mejorarlos. Este registro no utiliza cookies ni identificadores de persona: la ubicación se calcula a
+        partir de tu dirección IP en el momento de la visita, pero la IP no se guarda.
       </p>
 
       <h2>Cómo gestionar o retirar tu consentimiento</h2>

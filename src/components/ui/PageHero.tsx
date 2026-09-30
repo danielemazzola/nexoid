@@ -11,7 +11,7 @@ interface PageHeroProps {
 
 /** Cabecera para las páginas internas. */
 const PageHero = ({ eyebrow, title, description, children }: PageHeroProps) => (
-  <section className="page_hero">
+  <section className="page_hero" data-section="Cabecera">
     <div className="container page_hero_inner">
       <span className="eyebrow reveal">{eyebrow}</span>
       <h1 className="reveal" style={delay(0.06)}>

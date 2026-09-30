@@ -11,7 +11,7 @@ const topics = ["Microsoft Entra ID", "MFA", "Acceso condicional", "PIM", "Power
 
 const Blog = () => (
   <>
-    <Seo {...seo.blog} jsonLd={breadcrumbJsonLd("Blog", "/blog")} />
+    <Seo {...seo.blog} noindex jsonLd={breadcrumbJsonLd("Blog", "/blog")} />
     <PageHero
       eyebrow="Blog"
       title={

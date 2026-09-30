@@ -7,7 +7,7 @@ const CtaBanner = () => {
   const { cta } = company;
 
   return (
-    <section className="section">
+    <section className="section" data-section="Llamada a la acción">
       <div className="container">
         <div className="cta_box reveal">
           <div className="cta_rings" aria-hidden="true">

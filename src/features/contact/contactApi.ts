@@ -1,6 +1,7 @@
 import { postJson } from "../../services/http";
 import type { ContactTopicId } from "../../data/contact";
 import type { CaptchaAnswer } from "../captcha/captchaApi";
+import { getAttribution } from "../analytics/tracker";
 
 export interface ContactPayload {
   fullName: string;
@@ -19,4 +20,8 @@ export interface ContactRequest extends ContactPayload {
 }
 
 export const sendContactRequest = (payload: ContactRequest) =>
-  postJson<{ id: string }>("/api/contact", { ...payload, sourcePath: window.location.pathname });
+  postJson<{ id: string }>("/api/contact", {
+    ...payload,
+    sourcePath: window.location.pathname,
+    attribution: getAttribution() ?? undefined,
+  });

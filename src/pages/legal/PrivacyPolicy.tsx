@@ -34,13 +34,17 @@ const PrivacyPolicy = () => (
     <h3>Consultas y solicitudes de auditoría</h3>
     <p>
       Si nos escribes, tratamos tu nombre, correo electrónico, teléfono, empresa y la información que nos facilites para
-      responderte y, en su caso, preparar una propuesta. Al enviar el formulario te mandamos automáticamente un
+      responderte y, en su caso, preparar una propuesta. Junto a tu consulta guardamos la ubicación aproximada desde la
+      que la envías (país, región y ciudad, sin la IP) y cómo llegaste a la web (primera página visitada, dominio de
+      procedencia y campaña), para conocer qué canales nos traen clientes. Al enviar el formulario te mandamos automáticamente un
       email confirmando que hemos recibido tu consulta. <strong>Base jurídica:</strong> aplicación de medidas
       precontractuales a petición tuya (art. 6.1.b RGPD) y tu consentimiento al contactarnos (art. 6.1.a RGPD).
     </p>
     <h3>Medición de visitas</h3>
     <p>
-      Registramos de forma anónima las páginas visitadas (sin cookies y sin guardar tu IP). Si aceptas las cookies
+      Registramos de forma anónima las páginas visitadas, su procedencia y campaña, el tipo de dispositivo y navegador,
+      la ubicación aproximada (país, región y ciudad, deducida de la IP sin guardarla), el tiempo de lectura y el
+      desplazamiento por la página (sin cookies ni identificadores de persona). Si aceptas las cookies
       analíticas, asociamos además un identificador aleatorio de visitante y de sesión para contar visitantes
       únicos. <strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD y art. 22.2 LSSI) para las cookies
       analíticas; interés legítimo en conocer el uso agregado de la web (art. 6.1.f RGPD) para el registro anónimo.

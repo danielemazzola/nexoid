@@ -23,7 +23,7 @@ const Contact = () => {
         description={cta.description}
       />
 
-      <section className="section contact_section">
+      <section className="section contact_section" data-section="Formulario de contacto">
         <div className="container contact_grid">
           <div className="contact_card card reveal">
             <h2>Solicita tu auditoría</h2>
