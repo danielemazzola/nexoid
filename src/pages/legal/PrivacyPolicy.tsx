@@ -82,6 +82,10 @@ const PrivacyPolicy = () => (
       <li>
         <strong>IONOS</strong> (UE): alojamiento del buzón de correo en el que recibimos tus respuestas.
       </li>
+      <li>
+        <strong>Google</strong> (EE. UU.): Google Calendar y Google Meet, solo si concertamos una reunión contigo; recibe tu
+        nombre y tu email para enviarte la invitación.
+      </li>
     </ul>
     <p>
       Cuando un proveedor trata datos fuera del Espacio Económico Europeo, la transferencia se ampara en las garantías
