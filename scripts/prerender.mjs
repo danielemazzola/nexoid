@@ -51,7 +51,7 @@ const urls = pages
   .map(
     ({ path: url, sitemap }) => `  <url>
     <loc>${SITE}${url === "/" ? "" : url}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${sitemap.lastmod ? sitemap.lastmod.slice(0, 10) : today}</lastmod>
     <changefreq>${sitemap.changefreq}</changefreq>
     <priority>${sitemap.priority.toFixed(1)}</priority>
   </url>`,
@@ -62,5 +62,40 @@ await writeFile(
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`,
 );
 console.log("  ✓ sitemap.xml");
+
+// Feed RSS del blog (/blog/rss.xml): lectores de noticias y descubrimiento de artículos nuevos
+const posts = JSON.parse(await readFile(path.join(root, "src/data/blog.snapshot.json"), "utf8"));
+const xml = (value) => String(value).replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" })[c]);
+const items = posts
+  .slice(0, 30)
+  .map(
+    (post) => `    <item>
+      <title>${xml(post.title)}</title>
+      <link>${SITE}/blog/${post.slug}</link>
+      <guid isPermaLink="true">${SITE}/blog/${post.slug}</guid>
+      <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
+      <category>${xml(post.category)}</category>
+      <description>${xml(post.excerpt)}</description>
+    </item>`,
+  )
+  .join("\n");
+await mkdir(path.join(dist, "blog"), { recursive: true });
+await writeFile(
+  path.join(dist, "blog", "rss.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog de NexoID · Seguridad en Microsoft Entra ID</title>
+    <link>${SITE}/blog</link>
+    <atom:link href="${SITE}/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Guías prácticas sobre seguridad en Microsoft Entra ID y Microsoft 365 para pymes.</description>
+    <language>es-ES</language>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+${items}
+  </channel>
+</rss>
+`,
+);
+console.log(`  ✓ blog/rss.xml (${posts.length} artículos)`);
 
 await rm(ssrDir, { recursive: true, force: true });

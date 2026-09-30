@@ -35,7 +35,7 @@ const seo: Record<string, PageSeo> = {
   blog: {
     title: "Blog de seguridad en Microsoft Entra ID y Microsoft 365",
     description:
-      "Guías prácticas sobre Microsoft Entra ID, MFA, acceso condicional, PIM, PowerShell y Microsoft Graph para administradores de PYMEs.",
+      "Guías prácticas de Microsoft Entra ID: MFA, acceso condicional, PIM, passkeys, invitados y dominios en Microsoft 365, pensadas para administradores de pymes.",
   },
   contact: {
     title: "Contacto · Solicita una auditoría de Microsoft Entra ID",

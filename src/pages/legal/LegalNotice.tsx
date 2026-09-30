@@ -7,7 +7,7 @@ import Seo from "../../features/seo/Seo";
 const LegalNotice = () => (
   <LegalDocument
     title="Aviso legal"
-    updated="2026-09-30"
+    updated="2026-10-01"
     intro="Información general sobre el titular de este sitio web y las condiciones de uso."
   >
     <Seo title="Aviso legal" description={`Aviso legal y condiciones de uso del sitio web de ${site.name}.`} />
@@ -54,6 +54,21 @@ const LegalNotice = () => (
     <p>
       El titular no se responsabiliza del mal uso de los contenidos ni de los daños derivados de interrupciones del
       servicio ajenas a su control. Los enlaces a sitios de terceros se ofrecen a título informativo.
+    </p>
+
+    <h3>Contenidos del blog</h3>
+    <p>
+      Los artículos del <Link to="/blog">blog</Link> son informativos y generales: no sustituyen al análisis de cada
+      caso. Aplicar cambios de configuración en un entorno real es responsabilidad de quien los realiza; recomendamos
+      probarlos antes y consultar la documentación oficial de Microsoft, a la que enlazamos (los resúmenes de esa
+      documentación los elabora {site.name}). Los enlaces a Microsoft Learn y a otras webs se abren fuera de este sitio.
+    </p>
+    <h3>Preguntas de los lectores</h3>
+    <p>
+      Las preguntas se moderan antes de publicarse. No se publican las que incluyan datos personales de terceros,
+      información confidencial de una organización, publicidad o contenido ofensivo. Quien pregunta es responsable de
+      su contenido y puede pedir en cualquier momento que se retire escribiendo a{" "}
+      <a href={`mailto:${site.email}`}>{site.email}</a>.
     </p>
 
     <h2>5. Protección de datos y cookies</h2>

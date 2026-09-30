@@ -6,7 +6,7 @@ import Seo from "../../features/seo/Seo";
 const PrivacyPolicy = () => (
   <LegalDocument
     title="Política de privacidad"
-    updated="2026-09-30"
+    updated="2026-10-01"
     intro="Cómo tratamos tus datos personales conforme al RGPD y a la Ley Orgánica 3/2018 (LOPDGDD)."
   >
     <Seo
@@ -40,6 +40,20 @@ const PrivacyPolicy = () => (
       email confirmando que hemos recibido tu consulta. <strong>Base jurídica:</strong> aplicación de medidas
       precontractuales a petición tuya (art. 6.1.b RGPD) y tu consentimiento al contactarnos (art. 6.1.a RGPD).
     </p>
+    <h3>Preguntas en el blog</h3>
+    <p>
+      Si haces una pregunta en un artículo, tratamos tu nombre (opcional), tu correo electrónico y la pregunta. La
+      revisamos antes de publicarla: si la publicamos, junto a nuestra respuesta, solo aparece el nombre que hayas
+      indicado (o «Lector anónimo»); <strong>tu correo nunca se publica</strong> y solo lo usamos para avisarte de la
+      respuesta si lo pides. <strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD).
+    </p>
+    <h3>Suscripción a los avisos del blog</h3>
+    <p>
+      Si te suscribes, tratamos tu correo electrónico, la fecha y la página desde la que te suscribiste para enviarte un
+      aviso cada vez que publiquemos un artículo nuevo. La suscripción solo se activa cuando confirmas desde el enlace
+      que te enviamos por email (doble confirmación). Cada aviso incluye un enlace para darte de baja con un clic.{" "}
+      <strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD y art. 21 LSSI).
+    </p>
     <h3>Medición de visitas</h3>
     <p>
       Registramos de forma anónima las páginas visitadas, su procedencia y campaña, el tipo de dispositivo y navegador,
@@ -59,6 +73,14 @@ const PrivacyPolicy = () => (
     <h2>3. Cuánto tiempo conservamos los datos</h2>
     <ul>
       <li>Consultas: el tiempo necesario para atenderlas y, después, durante los plazos de prescripción legal.</li>
+      <li>
+        Preguntas del blog: las publicadas, mientras el artículo esté publicado o hasta que pidas retirarlas; las no
+        publicadas, un máximo de 12 meses.
+      </li>
+      <li>
+        Suscripción al blog: hasta que te des de baja. Las suscripciones no confirmadas se borran a los 7 días. Tras la
+        baja conservamos solo tu email y la fecha de baja durante 3 años, para acreditar que respetamos tu decisión.
+      </li>
       <li>Datos analíticos con identificador: un máximo de 24 meses; después se conservan solo agregados.</li>
       <li>Registro de consentimiento: mientras sea necesario para acreditarlo.</li>
     </ul>
@@ -73,11 +95,13 @@ const PrivacyPolicy = () => (
         <strong>Vercel Inc.</strong> (EE. UU.): alojamiento de la web y de la API.
       </li>
       <li>
-        <strong>Neon</strong> (servidores en Frankfurt, UE): base de datos donde se guardan las consultas.
+        <strong>Neon</strong> (servidores en Frankfurt, UE): base de datos donde se guardan las consultas, las preguntas
+        del blog y las suscripciones.
       </li>
       <li>
         <strong>Resend</strong> (EE. UU., envío desde servidores en la UE): envío del email de confirmación de tu
-        consulta y de nuestras respuestas.
+        consulta, de nuestras respuestas y de los emails del blog (confirmación de suscripción, avisos de artículos
+        nuevos y respuestas a tus preguntas).
       </li>
       <li>
         <strong>IONOS</strong> (UE): alojamiento del buzón de correo en el que recibimos tus respuestas.

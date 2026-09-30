@@ -5,6 +5,8 @@ import Services from "../pages/Services";
 import About from "../pages/About";
 import Pricing from "../pages/Pricing";
 import Blog from "../pages/Blog";
+import BlogPost from "../pages/BlogPost";
+import { SNAPSHOT as blogPosts } from "../features/blog/blogData";
 import Contact from "../pages/Contact";
 import LegalNotice from "../pages/legal/LegalNotice";
 import PrivacyPolicy from "../pages/legal/PrivacyPolicy";
@@ -13,6 +15,8 @@ import CookiesPolicy from "../pages/legal/CookiesPolicy";
 export interface SitemapEntry {
   priority: number;
   changefreq: "daily" | "weekly" | "monthly" | "yearly";
+  /** Última modificación (ISO); por defecto, el día del build */
+  lastmod?: string;
 }
 
 export interface AppRoute {
@@ -33,8 +37,13 @@ export const routes: AppRoute[] = [
   { path: "/precios", element: <Pricing />, sitemap: { priority: 0.9, changefreq: "weekly" } },
   { path: "/quienes-somos", element: <About />, sitemap: { priority: 0.7, changefreq: "monthly" } },
   { path: "/contacto", element: <Contact />, sitemap: { priority: 0.8, changefreq: "monthly" } },
-  // Sin artículos todavía: noindex y fuera del sitemap para no penalizar por contenido escaso
-  { path: "/blog", element: <Blog />, sitemap: null },
+  { path: "/blog", element: <Blog />, sitemap: { priority: 0.8, changefreq: "weekly", lastmod: blogPosts[0]?.updatedAt } },
+  // Un HTML prerenderizado por artículo publicado (copia del build: scripts/fetch-blog.mjs)
+  ...blogPosts.map((post) => ({
+    path: `/blog/${post.slug}`,
+    element: <BlogPost key={post.slug} slug={post.slug} />,
+    sitemap: { priority: 0.7, changefreq: "monthly" as const, lastmod: post.updatedAt },
+  })),
   { path: "/legal", element: <LegalNotice />, sitemap: { priority: 0.2, changefreq: "yearly" } },
   { path: "/privacidad", element: <PrivacyPolicy />, sitemap: { priority: 0.2, changefreq: "yearly" } },
   { path: "/cookies", element: <CookiesPolicy />, sitemap: { priority: 0.2, changefreq: "yearly" } },
