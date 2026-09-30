@@ -33,6 +33,8 @@ export const COOKIE_NAMES = {
   visitor: "nx_vid",
   session: "nx_sid",
   attribution: "nx_attr",
+  chat: "nx_chat",
+  nudge: "nx_nudge",
 } as const;
 
 export const categories: CategoryDefinition[] = [
@@ -60,6 +62,22 @@ export const cookies: CookieDefinition[] = [
     purpose: "Guarda tus preferencias de cookies y la versión de la política aceptada.",
     duration: "12 meses",
     type: "Cookie",
+  },
+  {
+    name: COOKIE_NAMES.chat,
+    category: "necessary",
+    provider: "NexoID (propia)",
+    purpose: "Guarda lo que escribes en el chat de contacto para no perderlo al cambiar de página. Se borra al enviarlo.",
+    duration: "Hasta cerrar la pestaña",
+    type: "sessionStorage",
+  },
+  {
+    name: COOKIE_NAMES.nudge,
+    category: "necessary",
+    provider: "NexoID (propia)",
+    purpose: "Recuerda que ya te hemos mostrado el saludo del chat, para no repetirlo.",
+    duration: "Hasta cerrar la pestaña",
+    type: "sessionStorage",
   },
   {
     name: COOKIE_NAMES.visitor,

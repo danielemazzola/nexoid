@@ -8,6 +8,7 @@ import { ApiError } from "../../services/http";
 import { sendContactRequest, type ContactPayload } from "./contactApi";
 import HumanCheck from "../captcha/HumanCheck";
 import type { CaptchaAnswer } from "../captcha/captchaApi";
+import { validateCompany, validateEmail, validateName, validatePhone } from "./validation";
 import "./contactForm.css";
 
 type Errors = Partial<Record<keyof ContactPayload | "captcha", string>>;
@@ -27,10 +28,13 @@ const initialValues: ContactPayload = {
 /** Validación en cliente (el backend vuelve a validar siempre). */
 const validate = (values: ContactPayload): Errors => {
   const errors: Errors = {};
-  if (values.fullName.trim().length < 2) errors.fullName = "Indica el nombre del responsable";
-  if (values.company.trim().length < 2) errors.company = "Indica la empresa";
-  if (!/^\S+@\S+\.\S+$/.test(values.email.trim())) errors.email = "Introduce un email válido";
-  if (!/^[+()\d\s.-]{9,30}$/.test(values.phone.trim())) errors.phone = "Introduce un teléfono válido";
+  const checks: [keyof ContactPayload, string | null][] = [
+    ["fullName", validateName(values.fullName)],
+    ["company", validateCompany(values.company)],
+    ["email", validateEmail(values.email)],
+    ["phone", validatePhone(values.phone)],
+  ];
+  for (const [field, message] of checks) if (message) errors[field] = message;
   if (!values.topic) errors.topic = "Selecciona un tema";
   if (!values.privacyAccepted) errors.privacyAccepted = "Debes aceptar la política de privacidad";
   return errors;
