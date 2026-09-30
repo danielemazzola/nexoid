@@ -1,21 +1,37 @@
 import company from "../../data/company";
+import catalog from "../../data/serviceCatalog";
 import site from "../../data/site";
 
 /** Generadores de datos estructurados (schema.org · JSON-LD). */
 
 const organizationId = `${site.website}/#organization`;
 
-/** Servicios ofrecidos, enlazados a la organización. */
+/** Servicios ofrecidos (catálogo con precios sin IVA), enlazados a la organización. */
 export const servicesJsonLd = () => ({
   "@context": "https://schema.org",
-  "@graph": company.services.items.map((service) => ({
+  "@graph": catalog.services.map((service) => ({
     "@type": "Service",
-    name: service.title,
-    description: service.description,
-    serviceType: service.tag,
+    "@id": `${site.website}/servicios#${service.id}`,
+    name: service.name,
+    description: `${service.tagline} ${service.forWhom}`,
+    url: `${site.website}/servicios#${service.id}`,
     areaServed: { "@type": "Country", name: "España" },
     availableLanguage: "es",
     provider: { "@id": organizationId },
+    offers: service.options
+      .filter((option) => "price" in option && option.price !== undefined)
+      .map((option) => ({
+        "@type": "Offer",
+        name: option.name,
+        description: option.detail,
+        priceCurrency: "EUR",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "EUR",
+          valueAddedTaxIncluded: false,
+          ...("from" in option && option.from ? { minPrice: option.price } : { price: option.price }),
+        },
+      })),
   })),
 });
 

@@ -104,6 +104,9 @@ const BlogPost = ({ slug }: { slug: string }) => {
                   )}
                 </span>
               </div>
+              <a href="#preguntas" className="post_questions_link">
+                💬 {questions.length ? blog.questions.count(questions.length) : blog.questions.ask}
+              </a>
             </div>
           </div>
         </header>
@@ -119,6 +122,12 @@ const BlogPost = ({ slug }: { slug: string }) => {
                       <a href={`#${h.id}`}>{h.text}</a>
                     </li>
                   ))}
+                  <li className="post_toc_questions">
+                    <a href="#preguntas">
+                      💬 {blog.questions.eyebrow}
+                      {questions.length > 0 && ` (${questions.length})`}
+                    </a>
+                  </li>
                 </ol>
               </details>
             </aside>

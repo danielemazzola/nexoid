@@ -69,7 +69,7 @@ const company: CompanyData = {
     title: "Nuestros servicios",
     description:
       "Servicios especializados diseñados para mejorar la seguridad, administración y gobernanza de Microsoft Entra ID.",
-    button: { text: "Ver todos los servicios", href: "/servicios" },
+    button: { text: "Ver servicios y precios", href: "/servicios" },
     items: [
       {
         id: "service-1",

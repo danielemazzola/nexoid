@@ -44,8 +44,8 @@ const PrivacyPolicy = () => (
     <p>
       Si haces una pregunta en un artículo, tratamos tu nombre (opcional), tu correo electrónico y la pregunta. La
       revisamos antes de publicarla: si la publicamos, junto a nuestra respuesta, solo aparece el nombre que hayas
-      indicado (o «Lector anónimo»); <strong>tu correo nunca se publica</strong> y solo lo usamos para avisarte de la
-      respuesta si lo pides. <strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD).
+      indicado (o «Lector anónimo»); <strong>tu correo nunca se publica</strong>: solo lo usamos para confirmarte que hemos
+      recibido la pregunta y, si lo pides, para avisarte de la respuesta. <strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD).
     </p>
     <h3>Suscripción a los avisos del blog</h3>
     <p>

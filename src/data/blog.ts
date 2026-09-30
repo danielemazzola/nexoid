@@ -26,6 +26,8 @@ const blog = {
 
   questions: {
     eyebrow: "Preguntas de los lectores",
+    count: (n: number) => (n === 1 ? "1 pregunta respondida" : `${n} preguntas respondidas`),
+    ask: "¿Tienes una duda? Pregunta",
     title: "¿Tienes una duda sobre este tema?",
     description: "Pregunta y te respondemos personalmente. Publicamos las preguntas útiles para todos (solo con tu nombre, nunca tu email).",
     empty: "Aún no hay preguntas publicadas. ¡Sé el primero!",
@@ -34,7 +36,7 @@ const blog = {
     name: "Nombre",
     namePlaceholder: "Cómo quieres aparecer",
     email: "Email",
-    emailHint: "No se publica. Solo para avisarte de la respuesta.",
+    emailHint: "No se publica. Te confirmamos que la hemos recibido y, si quieres, te avisamos de la respuesta.",
     question: "Tu pregunta",
     questionPlaceholder: "Por ejemplo: ¿cómo lo aplico si tengo usuarios sincronizados desde Active Directory?",
     notify: "Avísame por email cuando la respondáis",

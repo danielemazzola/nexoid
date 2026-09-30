@@ -11,6 +11,7 @@ import type { CaptchaAnswer } from "../captcha/captchaApi";
 import { validateCompany, validateEmail, validateName, validatePhone } from "./validation";
 import { usePlans } from "../pricing/plans";
 import pricing from "../../data/pricing";
+import catalog, { euros } from "../../data/serviceCatalog";
 import "./contactForm.css";
 
 type Errors = Partial<Record<keyof ContactPayload | "captcha", string>>;
@@ -63,6 +64,16 @@ const ContactForm = () => {
     const message = chosen.kind === "trial" ? pricing.demoMessage : pricing.contactMessage(chosen.name, chosenPeriod);
     setValues((prev) => ({ ...prev, topic: "planes", message: prev.message || message }));
   }, [chosen, chosenPeriod]);
+
+  // Llegada desde un servicio (/contacto?servicio=auditoria&opcion=Completa): su tema y mensaje prellenado
+  const service = catalog.services.find((s) => s.id === params.get("servicio")) ?? null;
+  const option = service?.options.find((o) => o.name === params.get("opcion")) ?? null;
+  const optionPrice = option && "price" in option && option.price !== undefined ? `${"from" in option && option.from ? "desde " : ""}${euros(option.price)}` : null;
+  const serviceLabel = service ? `${service.name}${option ? ` · ${option.name}` : ""}${optionPrice ? ` (${optionPrice} + IVA)` : ""}` : null;
+  useEffect(() => {
+    if (!service || !serviceLabel) return;
+    setValues((prev) => ({ ...prev, topic: service.topic, message: prev.message || `Me interesa: ${serviceLabel}. ¿Podemos hablar?` }));
+  }, [service, serviceLabel]);
 
   const onChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = event.target;
@@ -118,6 +129,14 @@ const ContactForm = () => {
           <span>
             Has elegido <strong>{chosen.name}</strong>
             {chosen.kind === "trial" ? ` · demo gratuita de ${chosen.trialDays} días` : chosenPeriod ? ` · ${chosenPeriod}` : ""}. Te respondemos personalmente.
+          </span>
+        </p>
+      )}
+      {!chosen && serviceLabel && (
+        <p className="contact_plan" role="status">
+          <Icon name="sparkle" size={16} />
+          <span>
+            Has elegido <strong>{serviceLabel}</strong>. Te respondemos personalmente con un presupuesto cerrado.
           </span>
         </p>
       )}

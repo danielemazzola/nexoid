@@ -1,7 +1,7 @@
 import company from "../data/company";
 import PageHero from "../components/ui/PageHero";
 import Button from "../components/ui/Button";
-import ServicesGrid from "../components/sections/ServicesGrid";
+import ServiceCatalog from "../features/services/ServiceCatalog";
 import Solutions from "../components/sections/Solutions";
 import Problems from "../components/sections/Problems";
 import Process from "../components/sections/Process";
@@ -31,7 +31,7 @@ const Services = () => {
       >
         <Button value={hero.primaryButton.text} href={hero.primaryButton.href} />
       </PageHero>
-      <ServicesGrid showButton={false} />
+      <ServiceCatalog />
       <Solutions />
       <Process />
       <Problems />

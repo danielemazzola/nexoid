@@ -17,8 +17,8 @@
     "seoTitle": "Configuraciones de Entra ID que casi nadie revisa",
     "seoDescription": "Ajustes de Microsoft Entra ID que vienen abiertos por defecto y casi nadie revisa: registro de apps, creación de tenants, invitados, registros y más, según Microsoft.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:54:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:25:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 6,
     "publishedQuestions": 0,
     "questions": []
@@ -40,11 +40,20 @@
     "seoTitle": "Cómo activar MFA en Microsoft 365 paso a paso",
     "seoDescription": "Guía para pymes: activa la autenticación multifactor (MFA) en Microsoft 365 con valores predeterminados o acceso condicional, sin bloquear a nadie.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:53:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:24:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 4,
-    "publishedQuestions": 0,
-    "questions": []
+    "publishedQuestions": 1,
+    "questions": [
+      {
+        "id": "3c9721c4-279b-47cb-b491-3db4b70cfb22",
+        "name": "Piensa en Grande",
+        "question": "Tengo una duda sobre los pasos, podemos hablarlo?",
+        "answer": "Lo siento, ahora mismo no puedo atenderte.",
+        "answeredAt": "2026-09-30T22:40:39.789Z",
+        "publishedAt": "2026-09-30T22:40:39.789Z"
+      }
+    ]
   },
   {
     "slug": "valores-predeterminados-seguridad-vs-acceso-condicional",
@@ -62,8 +71,8 @@
     "seoTitle": "Valores predeterminados de seguridad vs acceso condicional",
     "seoDescription": "Comparativa para pymes: qué protegen los valores predeterminados de seguridad de Microsoft Entra ID, qué aporta el acceso condicional y cuándo cambiar.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:52:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:23:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []
@@ -85,8 +94,8 @@
     "seoTitle": "Bloquear la autenticación heredada en Microsoft 365",
     "seoDescription": "Detecta y bloquea la autenticación heredada (IMAP, POP, SMTP AUTH) en Microsoft 365 con acceso condicional, sin romper impresoras ni aplicaciones.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:51:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:22:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []
@@ -108,8 +117,8 @@
     "seoTitle": "Cuentas de acceso de emergencia (break glass) en Entra ID",
     "seoDescription": "Cómo crear y proteger cuentas de acceso de emergencia (break glass) en Microsoft Entra ID: recomendaciones de Microsoft, MFA, exclusiones y alertas.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:50:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:21:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 5,
     "publishedQuestions": 0,
     "questions": []
@@ -131,8 +140,8 @@
     "seoTitle": "PIM en Microsoft Entra ID: administradores just-in-time",
     "seoDescription": "Qué es Privileged Identity Management (PIM), qué licencia necesita y cómo usarlo para que los administradores de Microsoft 365 solo tengan permisos cuando los necesitan.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:49:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:20:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []
@@ -155,8 +164,8 @@
     "seoTitle": "Passkeys y llaves FIDO2 en Microsoft Entra ID",
     "seoDescription": "Qué son las passkeys y las llaves FIDO2, por qué resisten el phishing y cómo desplegarlas en Microsoft Entra ID paso a paso, empezando por los administradores.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:48:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:19:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []
@@ -179,8 +188,8 @@
     "seoTitle": "Usuarios inactivos e invitados en Entra ID con PowerShell",
     "seoDescription": "Scripts de Microsoft Graph PowerShell para encontrar usuarios inactivos e invitados en Microsoft Entra ID, y un proceso seguro para desactivarlos y ahorrar licencias.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:47:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:18:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []
@@ -202,8 +211,8 @@
     "seoTitle": "Consentimiento de aplicaciones en Entra ID (OAuth)",
     "seoDescription": "Protege Microsoft 365 del phishing de consentimiento: configura el consentimiento de usuarios, activa el flujo de aprobación y revisa los permisos de las apps.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:46:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:17:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []
@@ -226,8 +235,8 @@
     "seoTitle": "Añadir un dominio en Microsoft 365 y cambiar el UPN",
     "seoDescription": "Verifica un dominio en Microsoft 365, configura el DNS (MX, SPF, autodiscover) y cambia el UPN de los usuarios de forma segura, también en entornos híbridos.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:45:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:16:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []
@@ -249,8 +258,8 @@
     "seoTitle": "Microsoft Secure Score: cómo priorizar la seguridad",
     "seoDescription": "Qué es Microsoft Secure Score, cómo leer la puntuación, qué acciones priorizar primero y qué trampas evitar para mejorar de verdad la seguridad de Microsoft 365.",
     "authorName": "Daniele Mazzola",
-    "publishedAt": "2026-09-30T21:44:34.572Z",
-    "updatedAt": "2026-09-30T21:54:34.572Z",
+    "publishedAt": "2026-09-30T22:15:42.882Z",
+    "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 3,
     "publishedQuestions": 0,
     "questions": []

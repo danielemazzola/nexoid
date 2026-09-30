@@ -13,7 +13,10 @@ const PostCard = ({ post, index = 0, featured = false, headingLevel = 2 }: { pos
       <div className="post_card_body">
         <p className="post_card_meta">
           <span className="post_category">{post.category}</span>
-          <span>{blog.minutes(post.readingMinutes)}</span>
+          <span>
+            {blog.minutes(post.readingMinutes)}
+            {post.publishedQuestions > 0 && ` · 💬 ${post.publishedQuestions}`}
+          </span>
         </p>
         <Heading className="post_card_title">
           <Link to={`/blog/${post.slug}`} className="post_card_link">

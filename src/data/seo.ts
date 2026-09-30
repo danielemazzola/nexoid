@@ -18,9 +18,9 @@ const seo: Record<string, PageSeo> = {
       "Auditorías, consultoría y automatización de Microsoft Entra ID y Microsoft 365 para PYMEs. MFA, acceso condicional y PIM. Solicita tu auditoría inicial.",
   },
   services: {
-    title: "Auditoría y consultoría de Microsoft Entra ID",
+    title: "Servicios y precios de seguridad en Microsoft Entra ID",
     description:
-      "Auditoría del tenant, configuración de MFA, acceso condicional, PIM e Identity Protection, y automatización con PowerShell y Microsoft Graph.",
+      "Auditoría desde 990 €, soporte Identity Care, acceso seguro con MFA y acceso condicional, identidad híbrida y automatización. Precios claros para pymes.",
   },
   pricing: {
     title: "Planes y precios · Seguridad en Microsoft Entra ID",
