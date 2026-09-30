@@ -10,6 +10,7 @@ export const contactTopics = [
   { id: "pim-privilegios", label: "PIM y cuentas privilegiadas" },
   { id: "identidad-hibrida", label: "Identidad híbrida / Entra Connect" },
   { id: "incidencia", label: "Resolver una incidencia" },
+  { id: "planes", label: "Planes y licencias de NexoID" },
   { id: "otro", label: "Otra consulta" },
 ] as const;
 

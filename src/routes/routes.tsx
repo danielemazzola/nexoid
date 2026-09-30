@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import Home from "../pages/Home";
 import Services from "../pages/Services";
 import About from "../pages/About";
+import Pricing from "../pages/Pricing";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
 import LegalNotice from "../pages/legal/LegalNotice";
@@ -29,6 +30,7 @@ export interface AppRoute {
 export const routes: AppRoute[] = [
   { path: "/", element: <Home />, sitemap: { priority: 1.0, changefreq: "weekly" } },
   { path: "/servicios", element: <Services />, sitemap: { priority: 0.9, changefreq: "monthly" } },
+  { path: "/precios", element: <Pricing />, sitemap: { priority: 0.9, changefreq: "weekly" } },
   { path: "/quienes-somos", element: <About />, sitemap: { priority: 0.7, changefreq: "monthly" } },
   { path: "/contacto", element: <Contact />, sitemap: { priority: 0.8, changefreq: "monthly" } },
   // Sin artículos todavía: noindex y fuera del sitemap para no penalizar por contenido escaso

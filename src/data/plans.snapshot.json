@@ -1,0 +1,334 @@
+[
+  {
+    "code": "demo",
+    "name": "Demo",
+    "tagline": "Descubre el estado real de tu Microsoft Entra ID",
+    "audience": "Empresas que quieren ver el nivel de seguridad de su Microsoft Entra ID antes de decidir.",
+    "usage": "Se conecta al tenant con permisos de solo lectura en unos minutos. Incluye un análisis completo con la puntuación NexoID y las prioridades de mejora. Al terminar la prueba se puede pasar a cualquier plan sin repetir la conexión.",
+    "kind": "trial",
+    "trialDays": 14,
+    "priceMonthlyCents": 0,
+    "priceYearlyCents": 0,
+    "currency": "EUR",
+    "maxUsers": 25,
+    "maxTenants": 1,
+    "highlighted": false,
+    "features": [
+      {
+        "category": "Evaluación",
+        "label": "Puntuación de seguridad del tenant",
+        "detail": "Un análisis completo",
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "MFA, métodos de autenticación y protocolos heredados",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "Usuarios inactivos, invitados y cuentas sin uso",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Acceso",
+        "label": "Análisis de acceso condicional",
+        "detail": null,
+        "included": false
+      },
+      {
+        "category": "Privilegios",
+        "label": "Roles privilegiados y PIM",
+        "detail": null,
+        "included": false
+      },
+      {
+        "category": "Aplicaciones",
+        "label": "Apps empresariales y consentimientos de riesgo",
+        "detail": null,
+        "included": false
+      },
+      {
+        "category": "Alertas",
+        "label": "Alertas de cambios críticos",
+        "detail": null,
+        "included": false
+      },
+      {
+        "category": "Informes",
+        "label": "Informe de resultados",
+        "detail": "Solo en pantalla",
+        "included": true
+      },
+      {
+        "category": "Remediación",
+        "label": "Guías de corrección paso a paso",
+        "detail": "Resumen de prioridades",
+        "included": true
+      },
+      {
+        "category": "Soporte",
+        "label": "Soporte",
+        "detail": "Email",
+        "included": true
+      },
+      {
+        "category": "Consultoría",
+        "label": "Revisión con un consultor de NexoID",
+        "detail": null,
+        "included": false
+      }
+    ]
+  },
+  {
+    "code": "basica",
+    "name": "Básica",
+    "tagline": "Lo esencial bajo control, sin complicaciones",
+    "audience": "Pymes de hasta 50 usuarios sin equipo de IT dedicado.",
+    "usage": "Análisis automático semanal del tenant e informe mensual en PDF con lo que hay que corregir y cómo hacerlo, explicado sin tecnicismos.",
+    "kind": "paid",
+    "trialDays": null,
+    "priceMonthlyCents": 4900,
+    "priceYearlyCents": 49000,
+    "currency": "EUR",
+    "maxUsers": 50,
+    "maxTenants": 1,
+    "highlighted": false,
+    "features": [
+      {
+        "category": "Evaluación",
+        "label": "Puntuación de seguridad del tenant",
+        "detail": "Semanal",
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "MFA, métodos de autenticación y protocolos heredados",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "Usuarios inactivos, invitados y cuentas sin uso",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Acceso",
+        "label": "Análisis de acceso condicional",
+        "detail": "Estado de las políticas",
+        "included": true
+      },
+      {
+        "category": "Privilegios",
+        "label": "Roles privilegiados y PIM",
+        "detail": null,
+        "included": false
+      },
+      {
+        "category": "Aplicaciones",
+        "label": "Apps empresariales y consentimientos de riesgo",
+        "detail": null,
+        "included": false
+      },
+      {
+        "category": "Alertas",
+        "label": "Alertas de cambios críticos",
+        "detail": null,
+        "included": false
+      },
+      {
+        "category": "Informes",
+        "label": "Informe de resultados",
+        "detail": "PDF mensual",
+        "included": true
+      },
+      {
+        "category": "Remediación",
+        "label": "Guías de corrección paso a paso",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Soporte",
+        "label": "Soporte",
+        "detail": "Email · 48 h laborables",
+        "included": true
+      },
+      {
+        "category": "Consultoría",
+        "label": "Revisión con un consultor de NexoID",
+        "detail": null,
+        "included": false
+      }
+    ]
+  },
+  {
+    "code": "estandar",
+    "name": "Estándar",
+    "tagline": "Supervisión diaria y alertas para dormir tranquilo",
+    "audience": "Empresas de 50 a 250 usuarios con IT interno o proveedor externo.",
+    "usage": "Supervisión diaria, alertas por email ante cambios críticos (nuevos administradores, políticas desactivadas, apps con permisos peligrosos) y análisis de acceso condicional, privilegios y aplicaciones.",
+    "kind": "paid",
+    "trialDays": null,
+    "priceMonthlyCents": 12900,
+    "priceYearlyCents": 129000,
+    "currency": "EUR",
+    "maxUsers": 250,
+    "maxTenants": 1,
+    "highlighted": true,
+    "features": [
+      {
+        "category": "Evaluación",
+        "label": "Puntuación de seguridad del tenant",
+        "detail": "Diaria",
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "MFA, métodos de autenticación y protocolos heredados",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "Usuarios inactivos, invitados y cuentas sin uso",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Acceso",
+        "label": "Análisis de acceso condicional",
+        "detail": "Con recomendaciones",
+        "included": true
+      },
+      {
+        "category": "Privilegios",
+        "label": "Roles privilegiados y PIM",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Aplicaciones",
+        "label": "Apps empresariales y consentimientos de riesgo",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Alertas",
+        "label": "Alertas de cambios críticos",
+        "detail": "Email",
+        "included": true
+      },
+      {
+        "category": "Informes",
+        "label": "Informe de resultados",
+        "detail": "PDF mensual + histórico 12 meses",
+        "included": true
+      },
+      {
+        "category": "Remediación",
+        "label": "Guías de corrección paso a paso",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Soporte",
+        "label": "Soporte",
+        "detail": "Email · 24 h laborables",
+        "included": true
+      },
+      {
+        "category": "Consultoría",
+        "label": "Revisión con un consultor de NexoID",
+        "detail": "1 sesión al año (plan anual)",
+        "included": true
+      }
+    ]
+  },
+  {
+    "code": "vip",
+    "name": "VIP",
+    "tagline": "Acompañamiento experto y cumplimiento normativo",
+    "audience": "Organizaciones con requisitos de cumplimiento (ISO 27001, ENS, NIS2) o con varios tenants.",
+    "usage": "Todo lo de Estándar más un consultor de NexoID asignado: revisión trimestral por videollamada, remediación asistida con scripts de PowerShell y Graph, e informes preparados para auditoría.",
+    "kind": "paid",
+    "trialDays": null,
+    "priceMonthlyCents": 34900,
+    "priceYearlyCents": 349000,
+    "currency": "EUR",
+    "maxUsers": 1000,
+    "maxTenants": 3,
+    "highlighted": false,
+    "features": [
+      {
+        "category": "Evaluación",
+        "label": "Puntuación de seguridad del tenant",
+        "detail": "Diaria + bajo demanda",
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "MFA, métodos de autenticación y protocolos heredados",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Identidades",
+        "label": "Usuarios inactivos, invitados y cuentas sin uso",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Acceso",
+        "label": "Análisis de acceso condicional",
+        "detail": "Con recomendaciones",
+        "included": true
+      },
+      {
+        "category": "Privilegios",
+        "label": "Roles privilegiados y PIM",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Aplicaciones",
+        "label": "Apps empresariales y consentimientos de riesgo",
+        "detail": null,
+        "included": true
+      },
+      {
+        "category": "Alertas",
+        "label": "Alertas de cambios críticos",
+        "detail": "Email y Microsoft Teams",
+        "included": true
+      },
+      {
+        "category": "Informes",
+        "label": "Informe de resultados",
+        "detail": "Preparado para auditoría (ISO 27001, ENS, NIS2)",
+        "included": true
+      },
+      {
+        "category": "Remediación",
+        "label": "Guías de corrección paso a paso",
+        "detail": "Remediación asistida con PowerShell y Graph",
+        "included": true
+      },
+      {
+        "category": "Soporte",
+        "label": "Soporte",
+        "detail": "Prioritario · 4 h laborables",
+        "included": true
+      },
+      {
+        "category": "Consultoría",
+        "label": "Revisión con un consultor de NexoID",
+        "detail": "Trimestral por videollamada",
+        "included": true
+      }
+    ]
+  }
+]

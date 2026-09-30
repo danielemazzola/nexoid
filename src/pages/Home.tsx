@@ -8,6 +8,7 @@ import Why from "../components/sections/Why";
 import Process from "../components/sections/Process";
 import Faq from "../components/sections/Faq";
 import CtaBanner from "../components/sections/CtaBanner";
+import PricingPlans from "../features/pricing/PricingPlans";
 import Seo from "../features/seo/Seo";
 import { faqJsonLd, servicesJsonLd } from "../features/seo/schema";
 import seo from "../data/seo";
@@ -23,6 +24,7 @@ const Home = () => (
     <Sectors />
     <Why />
     <Process />
+    <PricingPlans compact />
     <Faq />
     <CtaBanner />
   </>

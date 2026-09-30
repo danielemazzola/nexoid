@@ -22,6 +22,11 @@ const seo: Record<string, PageSeo> = {
     description:
       "Auditoría del tenant, configuración de MFA, acceso condicional, PIM e Identity Protection, y automatización con PowerShell y Microsoft Graph.",
   },
+  pricing: {
+    title: "Planes y precios · Seguridad en Microsoft Entra ID",
+    description:
+      "Planes para proteger Microsoft Entra ID en PYMEs: demo gratuita de 14 días, Básica, Estándar y VIP. Mensual o anual, sin permanencia. Compara y elige.",
+  },
   about: {
     title: "Quiénes somos · Especialistas en identidad digital",
     description:

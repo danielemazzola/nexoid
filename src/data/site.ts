@@ -21,6 +21,7 @@ const site: SiteData = {
   navigation: [
     { id: "nav-home", title: "Inicio", path: "/" },
     { id: "nav-services", title: "Servicios", path: "/servicios" },
+    { id: "nav-pricing", title: "Precios", path: "/precios" },
     { id: "nav-about", title: "Quiénes somos", path: "/quienes-somos" },
     { id: "nav-blog", title: "Blog", path: "/blog" },
     { id: "nav-contact", title: "Contacto", path: "/contacto" },

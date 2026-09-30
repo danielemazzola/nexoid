@@ -1,5 +1,5 @@
-import { useCallback, useState, type ChangeEvent, type FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { useCallback, useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { contactTopics } from "../../data/contact";
 import site from "../../data/site";
 import FormField from "../../components/ui/FormField";
@@ -9,6 +9,8 @@ import { sendContactRequest, type ContactPayload } from "./contactApi";
 import HumanCheck from "../captcha/HumanCheck";
 import type { CaptchaAnswer } from "../captcha/captchaApi";
 import { validateCompany, validateEmail, validateName, validatePhone } from "./validation";
+import { usePlans } from "../pricing/plans";
+import pricing from "../../data/pricing";
 import "./contactForm.css";
 
 type Errors = Partial<Record<keyof ContactPayload | "captcha", string>>;
@@ -49,6 +51,18 @@ const ContactForm = () => {
   const [interacted, setInteracted] = useState(false);
   const [captchaReset, setCaptchaReset] = useState(0);
   const onCaptcha = useCallback((answer: CaptchaAnswer | null) => setCaptcha(answer), []);
+
+  // Llegada desde un pack (/contacto?plan=estandar&periodo=anual): tema «Planes» y mensaje prellenado.
+  // Se aplica tras montar para que coincida con el HTML prerenderizado (que no tiene parámetros).
+  const [params] = useSearchParams();
+  const plans = usePlans();
+  const chosen = plans.find((p) => p.code === params.get("plan")) ?? null;
+  const chosenPeriod = params.get("periodo") === "anual" ? "anual" : params.get("periodo") === "mensual" ? "mensual" : null;
+  useEffect(() => {
+    if (!chosen) return;
+    const message = chosen.kind === "trial" ? pricing.demoMessage : pricing.contactMessage(chosen.name, chosenPeriod);
+    setValues((prev) => ({ ...prev, topic: "planes", message: prev.message || message }));
+  }, [chosen, chosenPeriod]);
 
   const onChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = event.target;
@@ -98,6 +112,15 @@ const ContactForm = () => {
 
   return (
     <form className="contact_form" onSubmit={onSubmit} onFocus={() => setInteracted(true)} noValidate>
+      {chosen && (
+        <p className="contact_plan" role="status">
+          <Icon name="sparkle" size={16} />
+          <span>
+            Has elegido <strong>{chosen.name}</strong>
+            {chosen.kind === "trial" ? ` · demo gratuita de ${chosen.trialDays} días` : chosenPeriod ? ` · ${chosenPeriod}` : ""}. Te respondemos personalmente.
+          </span>
+        </p>
+      )}
       <div className="contact_form_grid">
         <FormField
           label="Nombre del responsable"

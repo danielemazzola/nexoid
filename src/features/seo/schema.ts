@@ -20,10 +20,10 @@ export const servicesJsonLd = () => ({
 });
 
 /** Preguntas frecuentes. */
-export const faqJsonLd = () => ({
+export const faqJsonLd = (items: readonly { question: string; answer: string }[] = company.faq.items) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: company.faq.items.map((item) => ({
+  mainEntity: items.map((item) => ({
     "@type": "Question",
     name: item.question,
     acceptedAnswer: { "@type": "Answer", text: item.answer },
