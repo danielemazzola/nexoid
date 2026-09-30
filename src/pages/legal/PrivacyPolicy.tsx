@@ -77,7 +77,10 @@ const PrivacyPolicy = () => (
       </li>
       <li>
         <strong>Resend</strong> (EE. UU., envío desde servidores en la UE): envío del email de confirmación de tu
-        consulta y del aviso interno con sus datos.
+        consulta y de nuestras respuestas.
+      </li>
+      <li>
+        <strong>IONOS</strong> (UE): alojamiento del buzón de correo en el que recibimos tus respuestas.
       </li>
     </ul>
     <p>
