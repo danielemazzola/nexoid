@@ -22,6 +22,7 @@ export interface SiteData {
   owner: { name: string; nif: string; address: string; registry?: string };
   navigation: LinkItem[];
   cta: Cta;
+  clientArea: { text: string; href: string };
   legal: LinkItem[];
   stack: string[];
 }

@@ -43,17 +43,8 @@
     "publishedAt": "2026-09-30T22:24:42.882Z",
     "updatedAt": "2026-09-30T22:25:42.882Z",
     "readingMinutes": 4,
-    "publishedQuestions": 1,
-    "questions": [
-      {
-        "id": "3c9721c4-279b-47cb-b491-3db4b70cfb22",
-        "name": "Piensa en Grande",
-        "question": "Tengo una duda sobre los pasos, podemos hablarlo?",
-        "answer": "Lo siento, ahora mismo no puedo atenderte.",
-        "answeredAt": "2026-09-30T22:40:39.789Z",
-        "publishedAt": "2026-09-30T22:40:39.789Z"
-      }
-    ]
+    "publishedQuestions": 0,
+    "questions": []
   },
   {
     "slug": "valores-predeterminados-seguridad-vs-acceso-condicional",

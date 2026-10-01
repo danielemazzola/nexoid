@@ -5,6 +5,14 @@ import Logo from "../../ui/Logo";
 import Button from "../../ui/Button";
 import "./header.css";
 
+/** Candado: zona privada de clientes */
+const LockIcon = () => (
+  <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="4" y="11" width="16" height="10" rx="2" />
+    <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+  </svg>
+);
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -49,6 +57,10 @@ const Header = () => {
         </nav>
 
         <div className="header_actions">
+          <a href={site.clientArea.href} className="header_client" aria-label={site.clientArea.text} title={site.clientArea.text}>
+            <LockIcon />
+            <span className="header_client_text">{site.clientArea.text}</span>
+          </a>
           <Button value={site.cta.text} href={site.cta.href} arrow={false} className="header_cta" />
           <button
             type="button"
@@ -80,6 +92,10 @@ const Header = () => {
               {item.title}
             </NavLink>
           ))}
+          <a href={site.clientArea.href} className="header_mobile_client" tabIndex={open ? 0 : -1}>
+            <LockIcon />
+            {site.clientArea.text}
+          </a>
           <Button value={site.cta.text} href={site.cta.href} className="header_mobile_cta" />
         </nav>
       </div>

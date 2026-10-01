@@ -29,6 +29,9 @@ const site: SiteData = {
 
   cta: { text: "Solicitar auditoría", href: "/contacto" },
 
+  /** Portal del cliente (software NexoID): inicio de sesión con la cuenta de Microsoft 365 */
+  clientArea: { text: "Acceso clientes", href: "https://app.nexoid.es" },
+
   legal: [
     { id: "legal-1", title: "Aviso legal", path: "/legal" },
     { id: "legal-2", title: "Privacidad", path: "/privacidad" },

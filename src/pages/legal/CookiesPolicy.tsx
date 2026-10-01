@@ -78,6 +78,15 @@ const CookiesPolicy = () => {
         partir de tu dirección IP en el momento de la visita, pero la IP no se guarda.
       </p>
 
+      <h2>Portal del cliente (app.nexoid.es)</h2>
+      <p>
+        Al iniciar sesión en el portal del cliente, la biblioteca oficial de Microsoft para el inicio de sesión
+        (MSAL) guarda en el almacenamiento de sesión del navegador (<em>sessionStorage</em>) los datos necesarios
+        para mantener tu sesión de Microsoft abierta. Es un almacenamiento técnico, imprescindible para el servicio que
+        has pedido, por lo que no requiere consentimiento (art. 22.2 LSSI). Se borra al cerrar el navegador o la
+        sesión, y el portal no usa cookies analíticas ni publicitarias.
+      </p>
+
       <h2>Cómo gestionar o retirar tu consentimiento</h2>
       <p>
         Puedes aceptar, rechazar o cambiar tu elección en cualquier momento, con la misma facilidad con la que la

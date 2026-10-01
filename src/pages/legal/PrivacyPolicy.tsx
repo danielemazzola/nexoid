@@ -69,6 +69,33 @@ const PrivacyPolicy = () => (
       que has dado o rechazado el consentimiento. <strong>Base jurídica:</strong> cumplimiento de una obligación
       legal (art. 6.1.c y art. 7.1 RGPD).
     </p>
+    <h3>Acceso al portal del cliente (app.nexoid.es)</h3>
+    <p>
+      Si tu organización contrata el software de {site.name}, inicias sesión con tu cuenta de trabajo de Microsoft
+      365. Microsoft Entra ID nos facilita tu nombre, tu correo de inicio de sesión y los identificadores de tu usuario
+      y de tu organización; <strong>nunca recibimos tu contraseña</strong>. Los usamos para identificarte, comprobar la
+      licencia de tu organización y registrar quién conecta el tenant o lanza cada análisis.{" "}
+      <strong>Base jurídica:</strong> ejecución del contrato con tu organización (art. 6.1.b RGPD) e interés legítimo en
+      la seguridad del servicio (art. 6.1.f RGPD).
+    </p>
+    <h3>Análisis de seguridad del tenant de los clientes</h3>
+    <p>
+      Cuando un administrador global de un cliente autoriza la aplicación <strong>NexoID Scanner</strong>, esta lee
+      con permisos <strong>de solo lectura</strong> de Microsoft Graph la configuración de seguridad de su Microsoft Entra
+      ID y, de cada usuario, el nombre, el correo de inicio de sesión, si la cuenta está activa, si es invitado, la
+      fecha de alta, las licencias asignadas y, si su licencia lo permite, la fecha del último inicio de sesión; además
+      de los roles de administración, el registro de métodos de MFA, las aplicaciones y sus permisos, los dominios y la
+      puntuación de seguridad de Microsoft. <strong>No lee correos, archivos, chats ni contraseñas, y no puede
+      modificar nada</strong>. De cada análisis guardamos el resultado (puntuación, controles revisados y, como máximo,
+      25 cuentas afectadas por control) para mostrar al cliente su historial.
+    </p>
+    <p>
+      En este tratamiento <strong>el cliente es el responsable y {site.name} actúa como encargado del tratamiento</strong>{" "}
+      (art. 28 RGPD), siguiendo sus instrucciones y en los términos del acuerdo de encargo que se firma con la
+      licencia. Si eres usuario de una organización cliente, puedes ejercer tus derechos ante ella o escribiéndonos y
+      se lo trasladaremos. El cliente puede retirar el acceso en cualquier momento eliminando la aplicación NexoID
+      Scanner en el centro de administración de Microsoft Entra (Aplicaciones empresariales).
+    </p>
 
     <h2>3. Cuánto tiempo conservamos los datos</h2>
     <ul>
@@ -82,6 +109,11 @@ const PrivacyPolicy = () => (
         baja conservamos solo tu email y la fecha de baja durante 3 años, para acreditar que respetamos tu decisión.
       </li>
       <li>Datos analíticos con identificador: un máximo de 24 meses; después se conservan solo agregados.</li>
+      <li>
+        Análisis de seguridad de los clientes: mientras la organización tenga una licencia y hasta 12 meses después de
+        que termine; después se borran automáticamente, igual que el registro de conexión del tenant. El cliente puede
+        pedir su eliminación antes en cualquier momento. Los enlaces de conexión pendientes caducan a las 24 horas.
+      </li>
       <li>Registro de consentimiento: mientras sea necesario para acreditarlo.</li>
     </ul>
 
@@ -92,13 +124,17 @@ const PrivacyPolicy = () => (
     </p>
     <ul>
       <li>
-        <strong>Vercel Inc.</strong> (EE. UU.): alojamiento de la web y de la API.
+        <strong>Vercel Inc.</strong> (EE. UU.): alojamiento de la web, de la API y del portal del cliente.
       </li>
       <li>
         <strong>Neon</strong> (servidores en Frankfurt, UE): base de datos donde se guardan las consultas, las preguntas
-        del blog y las suscripciones.
+        del blog, las suscripciones y los análisis de seguridad de los clientes.
       </li>
       <li>
+        <strong>Microsoft Ireland Operations Ltd.</strong> (UE): Microsoft Azure aloja el motor de análisis del
+        software en la región Spain Central (Madrid), y Microsoft Entra ID gestiona el inicio de sesión en el portal
+        del cliente.
+      </li>      <li>
         <strong>Resend</strong> (EE. UU., envío desde servidores en la UE): envío del email de confirmación de tu
         consulta, de nuestras respuestas y de los emails del blog (confirmación de suscripción, avisos de artículos
         nuevos y respuestas a tus preguntas).

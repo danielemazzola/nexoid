@@ -34,6 +34,9 @@ const Footer = () => {
                     <Link to={item.path}>{item.title}</Link>
                   </li>
                 ))}
+                <li>
+                  <a href={site.clientArea.href}>{site.clientArea.text}</a>
+                </li>
               </ul>
             </div>
             <div>
