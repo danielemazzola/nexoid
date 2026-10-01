@@ -16,6 +16,8 @@ export interface PublicPlan {
   currency: string;
   maxUsers: number | null;
   maxTenants: number;
+  /** Análisis bajo demanda al día en el portal del cliente (null = sin límite; ausente en copias antiguas) */
+  scansPerDay?: number | null;
   highlighted: boolean;
   features: { category: string; label: string; detail: string | null; included: boolean }[];
 }

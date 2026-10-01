@@ -33,6 +33,8 @@ const pricing = {
   usersUnlimited: "Usuarios ilimitados",
   tenantsLimit: "{n} tenant",
   tenantsLimitPlural: "{n} tenants",
+  scansLimit: "{n} análisis al día",
+  scansUnlimited: "análisis ilimitados",
 
   /** Mensaje con el que se prellena el formulario al elegir un pack */
   contactMessage: (plan: string, period: string | null) =>

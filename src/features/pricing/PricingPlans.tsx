@@ -53,6 +53,12 @@ const PlanCard = ({ plan, period, compact, index }: { plan: PublicPlan; period: 
         <Icon name="users" size={16} />
         {plan.maxUsers ? fill(pricing.usersLimit, plan.maxUsers) : pricing.usersUnlimited} ·{" "}
         {fill(plan.maxTenants === 1 ? pricing.tenantsLimit : pricing.tenantsLimitPlural, plan.maxTenants)}
+        {plan.scansPerDay !== undefined && (
+          <>
+            {" · "}
+            {plan.scansPerDay ? fill(pricing.scansLimit, plan.scansPerDay) : pricing.scansUnlimited}
+          </>
+        )}
       </p>
 
       {plan.audience && <p className="pricing_audience">{plan.audience}</p>}

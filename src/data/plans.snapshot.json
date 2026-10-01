@@ -12,6 +12,7 @@
     "currency": "EUR",
     "maxUsers": 25,
     "maxTenants": 1,
+    "scansPerDay": 2,
     "highlighted": false,
     "features": [
       {
@@ -101,6 +102,7 @@
     "currency": "EUR",
     "maxUsers": 50,
     "maxTenants": 1,
+    "scansPerDay": 5,
     "highlighted": false,
     "features": [
       {
@@ -184,6 +186,7 @@
     "currency": "EUR",
     "maxUsers": 150,
     "maxTenants": 1,
+    "scansPerDay": 20,
     "highlighted": true,
     "features": [
       {
@@ -267,6 +270,7 @@
     "currency": "EUR",
     "maxUsers": 500,
     "maxTenants": 3,
+    "scansPerDay": null,
     "highlighted": false,
     "features": [
       {

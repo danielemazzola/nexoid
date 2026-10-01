@@ -65,6 +65,16 @@ const PlanComparison = () => {
                 </td>
               ))}
             </tr>
+            {plans.some((plan) => plan.scansPerDay !== undefined) && (
+              <tr>
+                <th scope="row">Análisis bajo demanda</th>
+                {plans.map((plan) => (
+                  <td key={plan.code} className={plan.highlighted ? "is-highlighted" : ""}>
+                    {plan.scansPerDay ? `${plan.scansPerDay} al día` : "Ilimitados"}
+                  </td>
+                ))}
+              </tr>
+            )}
             {rows.map((row) => (
               <tr key={row.label}>
                 <th scope="row">
